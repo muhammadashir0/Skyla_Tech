@@ -23,7 +23,7 @@
   <header class="nav" id="nav">
     <div class="container nav__inner">
             <a href="index.html" class="nav__logo" aria-label="Skyla Tech home">
-        <img class="nav__logo-img" src="assets/logo/skylatech-logo.svg" alt="Skyla Tech" />
+        <img class="nav__logo-img" src="assets/logo/skylatech-logo-dark.svg" alt="Skyla Tech" />
       </a>
 
       <nav class="nav__links" id="navLinks" aria-label="Primary">
@@ -54,24 +54,17 @@
       <div class="hero__glow"></div>
     </div>
 
-    <div class="container">
-      <div class="hero__grid">
-        <div class="hero__content">
-          <p class="hero__kicker reveal">Custom software development company</p>
-          <h1 class="hero__title reveal">
-            We turn ideas into <span class="grad-text">custom software</span> development at scale.
-          </h1>
-          <p class="hero__sub reveal">
-            Bring your products together to make a faster go to market, augment your IT team
-            or optimize existing processes.
-          </p>
-          <div class="hero__cta reveal">
-            <a href="#contact" class="btn btn--primary">let's talk</a>
-          </div>
-        </div>
-        <div class="hero__media reveal">
-          <img src="assets/img/hero-team.jpg" alt="The Skyla Tech software development team working together in a modern office" />
-        </div>
+    <div class="container hero__inner">
+      <p class="hero__kicker reveal">Custom software development company</p>
+      <h1 class="hero__title reveal">
+        We turn ideas into <span class="grad-text">custom software</span> development at scale.
+      </h1>
+      <p class="hero__sub reveal">
+        Bring your products together to make a faster go to market, augment your IT team
+        or optimize existing processes.
+      </p>
+      <div class="hero__cta reveal">
+        <a href="#contact" class="btn btn--primary">let's talk</a>
       </div>
 
       <div class="hero__stats reveal">
@@ -195,7 +188,27 @@
     <div class="container">
       <div class="split">
         <div class="split__media reveal">
-          <img class="photo" src="assets/img/team-laptop.jpg" alt="Skyla Tech developers collaborating on a project around a laptop" />
+          <div class="orb-frame">
+            <div class="orb-frame__glow"></div>
+            <div class="dev-visual" aria-hidden="true">
+              <div class="dev-visual__bar"><span></span><span></span><span></span></div>
+              <div class="dev-visual__window">
+                <div class="dev-visual__line w70"></div>
+                <div class="dev-visual__line w90"></div>
+                <div class="dev-visual__line w50"></div>
+                <div class="dev-visual__chart">
+                  <span style="height:30%"></span>
+                  <span style="height:55%"></span>
+                  <span style="height:45%"></span>
+                  <span style="height:75%"></span>
+                  <span style="height:60%"></span>
+                  <span style="height:90%"></span>
+                </div>
+                <div class="dev-visual__line w80"></div>
+                <div class="dev-visual__line w60"></div>
+              </div>
+            </div>
+          </div>
           <div class="split__badge">
             <span class="stat__num stat__num--on-dark" data-count="25" data-suffix="+">25+</span>
             <span class="split__badge-label">team members</span>
@@ -219,12 +232,6 @@
     </div>
   </section>
 
-  <!-- ============ BANNER ============ -->
-  <section class="banner">
-    <div class="container">
-      <img class="banner__img" src="assets/img/banner-team.jpg" alt="The Skyla Tech engineering team building custom software solutions" />
-    </div>
-  </section>
 
   <!-- ============ EXPERIENCE / CEO ============ -->
   <section class="section section--alt" id="experience">
@@ -236,10 +243,6 @@
           with must-have soft skills.
         </p>
       </div>
-
-      <figure class="ceo-photo reveal">
-        <img src="assets/img/ceo.jpg" alt="Muhammad Ashir, CEO at Skyla Tech" />
-      </figure>
 
       <figure class="quote-card reveal">
         <svg class="quote-card__mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
