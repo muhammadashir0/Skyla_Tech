@@ -27,7 +27,7 @@
       </a>
 
       <nav class="nav__links" id="navLinks" aria-label="Primary">
-        <a href="index.html">Home</a>
+        <a href="index.html" class="active">Home</a>
         <a href="success-stories.html">Success stories</a>
         <a href="how-we-work.html">How we work</a>
         <a href="technology-stack.html">Technology stack</a>
@@ -36,7 +36,7 @@
       </nav>
 
       <div class="nav__actions">
-        <a href="#contact" class="btn btn--primary btn--sm">Let's talk</a>
+        <a href="#contact" class="btn btn--navy btn--sm">Let's talk</a>
         <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
@@ -47,9 +47,6 @@
   <!-- ============ HERO ============ -->
   <section class="hero" id="home">
     <div class="hero__bg" aria-hidden="true">
-      <div class="aurora aurora--violet"></div>
-      <div class="aurora aurora--azure"></div>
-      <div class="aurora aurora--cyan"></div>
       <div class="grid-overlay"></div>
       <div class="hero__glow"></div>
     </div>
@@ -91,21 +88,21 @@
       <!-- Swap with your real client logos (SVG recommended) -->
       <div class="logos reveal" aria-label="Trusted by companies worldwide">
         <div class="logos__track">
-          <span class="logos__item">Uber</span>
-          <span class="logos__item">Roche</span>
-          <span class="logos__item">Lexly</span>
-          <span class="logos__item">Trace One</span>
-          <span class="logos__item">Wow!Stuff</span>
-          <span class="logos__item">Lumesse</span>
-          <span class="logos__item">Eurofleet</span>
+          <img class="logos__item" src="assets/logo/clients/uber.svg" alt="Uber" />
+          <img class="logos__item" src="assets/logo/clients/roche.svg" alt="Roche" />
+          <img class="logos__item" src="assets/logo/clients/lexly.svg" alt="Lexly" />
+          <img class="logos__item" src="assets/logo/clients/trace-one.svg" alt="Trace One" />
+          <img class="logos__item" src="assets/logo/clients/wowstuff.svg" alt="Wow!Stuff" />
+          <img class="logos__item" src="assets/logo/clients/lumesse.svg" alt="Lumesse" />
+          <img class="logos__item" src="assets/logo/clients/eurofleet.svg" alt="Eurofleet" />
           <!-- duplicate set for seamless loop -->
-          <span class="logos__item">Uber</span>
-          <span class="logos__item">Roche</span>
-          <span class="logos__item">Lexly</span>
-          <span class="logos__item">Trace One</span>
-          <span class="logos__item">Wow!Stuff</span>
-          <span class="logos__item">Lumesse</span>
-          <span class="logos__item">Eurofleet</span>
+          <img class="logos__item" src="assets/logo/clients/uber.svg" alt="Uber" />
+          <img class="logos__item" src="assets/logo/clients/roche.svg" alt="Roche" />
+          <img class="logos__item" src="assets/logo/clients/lexly.svg" alt="Lexly" />
+          <img class="logos__item" src="assets/logo/clients/trace-one.svg" alt="Trace One" />
+          <img class="logos__item" src="assets/logo/clients/wowstuff.svg" alt="Wow!Stuff" />
+          <img class="logos__item" src="assets/logo/clients/lumesse.svg" alt="Lumesse" />
+          <img class="logos__item" src="assets/logo/clients/eurofleet.svg" alt="Eurofleet" />
         </div>
       </div>
 
@@ -184,31 +181,11 @@
   </section>
 
   <!-- ============ APPROACH / DEVELOPING THE FUTURE ============ -->
-  <section class="section" id="approach-home">
+  <section class="section section--dark" id="approach-home">
     <div class="container">
       <div class="split">
         <div class="split__media reveal">
-          <div class="orb-frame">
-            <div class="orb-frame__glow"></div>
-            <div class="dev-visual" aria-hidden="true">
-              <div class="dev-visual__bar"><span></span><span></span><span></span></div>
-              <div class="dev-visual__window">
-                <div class="dev-visual__line w70"></div>
-                <div class="dev-visual__line w90"></div>
-                <div class="dev-visual__line w50"></div>
-                <div class="dev-visual__chart">
-                  <span style="height:30%"></span>
-                  <span style="height:55%"></span>
-                  <span style="height:45%"></span>
-                  <span style="height:75%"></span>
-                  <span style="height:60%"></span>
-                  <span style="height:90%"></span>
-                </div>
-                <div class="dev-visual__line w80"></div>
-                <div class="dev-visual__line w60"></div>
-              </div>
-            </div>
-          </div>
+          <img class="split__photo" src="assets/img/developing-future.jpg" alt="The Skyla Tech development team building custom software applications" />
           <div class="split__badge">
             <span class="stat__num stat__num--on-dark" data-count="25" data-suffix="+">25+</span>
             <span class="split__badge-label">team members</span>
@@ -244,14 +221,15 @@
         </p>
       </div>
 
-      <figure class="quote-card reveal">
+      <div class="experience-grid reveal">
+        <figure class="quote-card">
         <svg class="quote-card__mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
           <path d="M7 7H4a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h3v2a3 3 0 0 1-3 3H4M17 7h-3a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h3v2a3 3 0 0 1-3 3h-1"
                 stroke="url(#quoteGrad)" stroke-width="2" stroke-linecap="round" />
           <defs>
             <linearGradient id="quoteGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#8b5cf6" />
-              <stop offset="1" stop-color="#22d3ee" />
+              <stop offset="0" stop-color="#00aa64" />
+              <stop offset="1" stop-color="#2ab673" />
             </linearGradient>
           </defs>
         </svg>
@@ -268,6 +246,11 @@
           </span>
         </figcaption>
       </figure>
+
+        <figure class="experience-photo">
+          <img src="assets/img/experience.jpg" alt="The Skyla Tech team collaborating on client software projects" />
+        </figure>
+      </div>
 
       <div class="section__cta reveal">
         <a href="approach.html" class="link-arrow">see our approach</a>
@@ -337,7 +320,7 @@
   </section>
 
   <!-- ============ CONTACT ============ -->
-  <section class="section section--contact" id="contact">
+  <section class="section section--contact section--dark" id="contact">
     <div class="container">
       <div class="contact">
         <div class="contact__intro">

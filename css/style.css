@@ -73,6 +73,8 @@ input, textarea, select { font-family: inherit; }
 }
 .btn--primary { background: var(--medium-sea-green); color: #fff; }
 .btn--primary:hover { background: var(--button-hover); transform: translateY(-2px); box-shadow: 0 12px 26px -10px rgba(0, 170, 100, .55); }
+.btn--navy { background: var(--midnight-blue); color: #fff; }
+.btn--navy:hover { background: var(--hover-secondary); transform: translateY(-2px); box-shadow: 0 12px 26px -10px rgba(3, 40, 61, .5); }
 .btn--ghost { background: var(--midnight-blue); color: #fff; }
 .btn--ghost:hover { background: var(--hover-secondary); transform: translateY(-2px); }
 .btn--sm { padding: .5rem 1.4rem; font-size: .875rem; }
@@ -111,16 +113,19 @@ input, textarea, select { font-family: inherit; }
 .nav__links { display: flex; gap: 32px; }
 .nav__links a {
   font-family: var(--font-display); font-weight: 700; font-size: .92rem;
-  color: var(--midnight-blue); position: relative; padding: 6px 0;
+  color: var(--midnight-blue); position: relative; padding: 6px 14px;
   transition: color .25s ease;
 }
 .nav__links a::after {
-  content: ""; position: absolute; left: 0; bottom: 0; height: 2px; width: 0;
-  background: var(--button-hover); border-radius: 2px;
+  content: ""; position: absolute; left: 50%; bottom: -2px; transform: translateX(-50%);
+  height: 3px; width: 0; border-radius: 3px;
+  background: var(--medium-sea-green);
   transition: width .28s ease;
 }
 .nav__links a:hover { color: var(--button-hover); }
-.nav__links a:hover::after { width: 100%; }
+.nav__links a:hover::after { width: 70%; }
+.nav__links a.active { color: var(--midnight-blue); }
+.nav__links a.active::after { width: 70%; background: var(--medium-sea-green); }
 .nav__actions { display: flex; align-items: center; gap: 14px; }
 
 .nav__burger { display: none; flex-direction: column; gap: 5px; background: none; border: 0; padding: 8px; }
@@ -191,6 +196,36 @@ input, textarea, select { font-family: inherit; }
 .section__cta { text-align: center; margin-top: 44px; }
 .reveal-stat { display: inline-flex; align-items: baseline; gap: 8px; color: var(--text-muted); }
 .reveal-stat .stat__num { color: var(--medium-sea-green); font-size: 1.5rem; }
+
+/* ---------- Dark navy section (Ready4S: developing-the-future, contact) ---------- */
+.section--dark {
+  background: var(--midnight-blue);
+  color: rgba(255, 255, 255, 0.85);
+}
+.section--dark .section__title { color: var(--white); }
+.section--dark .section__lead { color: rgba(255, 255, 255, 0.7); }
+.section--dark .section__kicker { color: var(--white); }
+.section--dark .section__head { color: rgba(255, 255, 255, 0.85); }
+.section--dark .split__title { color: var(--white); }
+.section--dark .split__text { color: rgba(255, 255, 255, 0.72); }
+.section--dark .split__content .link-arrow { color: var(--button-hover); }
+.section--dark .contact__title { color: var(--white); }
+.section--dark .contact__confidence { color: var(--button-hover); }
+.section--dark .contact__confidence svg { color: var(--button-hover); }
+.section--dark .contact__stat .stat__label { color: rgba(255, 255, 255, 0.7); }
+
+/* ---------- Split photo (developing the future) ---------- */
+.split__photo {
+  width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius-lg);
+  display: block; box-shadow: 0 26px 60px -26px rgba(0, 0, 0, .55);
+}
+
+/* ---------- Experience grid (quote + photo) ---------- */
+.experience-grid {
+  display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 40px; align-items: center;
+}
+.experience-photo { position: relative; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--card-shadow-strong); }
+.experience-photo img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; display: block; }
 
 /* ---------- Logos marquee ---------- */
 .logos {
@@ -519,7 +554,7 @@ input, textarea, select { font-family: inherit; }
 .tech__badge--blue { background: linear-gradient(135deg, #209ce4, #4f8cff); }
 .tech__badge--green { background: linear-gradient(135deg, #00aa64, #2ab673); }
 .tech__badge--orange { background: linear-gradient(135deg, #f59e0b, #fb923c); }
-.tech__badge--purple { background: linear-gradient(135deg, #8b5cf6, #a78bfa); }
+.tech__badge--purple { background: linear-gradient(135deg, #03283d, #005775); }
 .tech__badge--amber { background: linear-gradient(135deg, #facc15, #f59e0b); }
 .tech__name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 700; color: var(--midnight-blue); margin-bottom: 6px; }
 .tech__text { font-size: .9rem; color: var(--text-muted); }
