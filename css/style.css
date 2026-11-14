@@ -167,6 +167,22 @@ input, textarea, select { font-family: inherit; }
 .hero__sub { color: var(--text-muted); font-size: clamp(1rem, 1.3vw, 1.12rem); margin-top: 18px; }
 .hero__cta { display: flex; justify-content: flex-end; }
 
+/* Hero visual — dark dashboard mockup (Ready4S reference) */
+.hero__visual { display: flex; justify-content: flex-end; }
+.hero__visual img { width: 100%; max-width: 340px; height: auto; display: block; }
+
+/* Hero soft blue-gray gradient tint (Ready4S reference) */
+.hero::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 45% 35% at 85% 75%, rgba(227, 236, 242, 0.85), transparent 70%),
+    radial-gradient(ellipse 35% 25% at 70% 30%, rgba(226, 236, 243, 0.6), transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}
+.hero > .container { position: relative; z-index: 1; }
+
 .hero__stats {
   display: flex; justify-content: space-between; align-items: flex-end;
   gap: 32px; margin-top: 72px; width: 100%;
@@ -212,6 +228,41 @@ input, textarea, select { font-family: inherit; }
 /* ---------- Sections ---------- */
 .section { padding: 90px 0; position: relative; }
 .section--alt { background: var(--alice-blue-2); }
+
+/* Soft blue-gray gradient tints matching Ready4S (hero, logos, testimonials, benefit) */
+#work { position: relative; }
+#work::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 30% 40% at 90% 50%, rgba(226, 236, 242, 0.6), transparent 75%),
+    radial-gradient(ellipse 20% 30% at 15% 70%, rgba(228, 237, 243, 0.5), transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+#work > .container { position: relative; z-index: 1; }
+
+#testimonials { position: relative; }
+#testimonials::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 35% 40% at 90% 30%, rgba(228, 236, 241, 0.5), transparent 75%),
+    radial-gradient(ellipse 25% 30% at 10% 70%, rgba(227, 236, 242, 0.45), transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+#testimonials > .container { position: relative; z-index: 1; }
+
+#experience { position: relative; }
+#experience::before {
+  content: "";
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 40% 50% at 50% 100%, rgba(247, 249, 248, 0.6), transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+#experience > .container { position: relative; z-index: 1; }
 .divider {
   height: 34px; width: 100%;
   background: linear-gradient(to bottom, transparent, var(--alice-blue) 30%, var(--alice-blue) 70%, transparent);
@@ -424,6 +475,20 @@ input, textarea, select { font-family: inherit; }
 .contact {
   display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: start;
 }
+
+/* Contact section soft tints (Ready4S: #f0f1f3 sides, #f6ffff center) */
+#contact { position: relative; }
+#contact::before {
+  content: "";
+  position: absolute; inset: 0;
+  background:
+    radial-gradient(ellipse 40% 60% at 10% 40%, rgba(240, 241, 243, 0.5), transparent 75%),
+    radial-gradient(ellipse 40% 60% at 90% 40%, rgba(240, 241, 243, 0.5), transparent 75%),
+    radial-gradient(ellipse 30% 50% at 50% 50%, rgba(246, 255, 255, 0.4), transparent 75%);
+  pointer-events: none;
+  z-index: 0;
+}
+#contact > .container { position: relative; z-index: 1; }
 .contact__title {
   font-family: var(--font-display); font-weight: 700; letter-spacing: -.02em;
   font-size: clamp(1.8rem, 3.4vw, 2.6rem); line-height: 1.2; color: var(--midnight-blue);
@@ -759,15 +824,24 @@ body[data-page="approach"] .nav__links a[href="approach.html"]::after { width: 1
   .nav__links.open { transform: translateY(0); }
   .nav__links a { padding: 14px 0; border-bottom: 1px solid var(--border); }
   .nav__burger { display: flex; }
-  .hero { padding: 120px 0 80px; }
-  .hero__stats { grid-template-columns: repeat(2, 1fr); gap: 28px 16px; }
-  .section { padding: 72px 0; }
-  .quote-card { padding: 38px 30px; }
-  .contact { padding: 28px 20px; }
+  .hero { padding: 110px 0 70px; }
+  .hero__grid { grid-template-columns: 1fr; gap: 32px; }
+  .hero__visual { justify-content: flex-start; max-width: 320px; }
+  .hero__visual img { max-width: 100%; }
+  .hero__stats { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
+  .section { padding: 64px 0; }
+  .quote-card { padding: 32px 24px; }
+  .contact { padding: 28px 20px; gap: 32px; }
+  .contact__form-card { padding: 24px 20px; }
   .field-grid { grid-template-columns: 1fr; }
   .testimonials__tabs { flex-direction: column; gap: 6px; }
   .footer__cols { grid-template-columns: 1fr 1fr; }
   .footer__bar-inner { flex-direction: column; gap: 6px; }
+  .split__badge { right: 0; bottom: 0; padding: 14px 20px; }
+  .divider-bar { padding: 14px 0; }
+  .divider-bar img { width: 220px; }
+  .topo-decor { padding: 16px 0 0; }
+  .topo-decor img { max-width: 100%; opacity: 0.5; }
 }
 @media (max-width: 480px) {
   .cards { grid-template-columns: 1fr; }
