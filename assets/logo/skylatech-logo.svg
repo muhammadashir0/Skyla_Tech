@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 180" width="520" height="180">
+  <defs>
+    <linearGradient id="swooshGL" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0" stop-color="#00aa64"/>
+      <stop offset="1" stop-color="#2ab673"/>
+    </linearGradient>
+    <linearGradient id="deltaGL" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d4a6e"/>
+      <stop offset="1" stop-color="#14577e"/>
+    </linearGradient>
+  </defs>
+
+  <g transform="translate(35,5)">
+    <path d="M 12 112 L 56 140 L 12 168" fill="none" stroke="url(#deltaGL)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 52 84 L 96 112 L 52 140" fill="none" stroke="#1a5f86" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 88 56 L 132 84 L 88 112" fill="none" stroke="url(#swooshGL)" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+    <circle cx="152" cy="66" r="5.5" fill="#2ab673"/>
+    <circle cx="164" cy="48" r="3.5" fill="#00aa64"/>
+    <circle cx="156" cy="88" r="2.8" fill="#0d4a6e"/>
+  </g>
+
+  <g font-family="'DejaVu Sans', 'Segoe UI', Arial, sans-serif">
+    <text x="250" y="98" font-size="74" font-weight="bold" fill="#ffffff" letter-spacing="-1">Skyla</text>
+    <text x="254" y="146" font-size="34" font-weight="600" fill="#2ab673" letter-spacing="7">TECH</text>
+  </g>
+</svg>
