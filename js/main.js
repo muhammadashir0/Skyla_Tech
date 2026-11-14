@@ -141,6 +141,11 @@
     field.addEventListener("input", function () { field.classList.remove("invalid"); });
   });
 
+  /* ---------- Hue-based gradient media (case/project cards) ---------- */
+  document.querySelectorAll("[data-hue]").forEach(function (el) {
+    el.style.setProperty("--hue", el.dataset.hue);
+  });
+
   /* ---------- Footer year ---------- */
   document.getElementById("year").textContent = new Date().getFullYear();
 })();
