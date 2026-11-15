@@ -159,13 +159,34 @@
     themeToggle.addEventListener("click", function () {
       var current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
       var next = current === "dark" ? "light" : "dark";
-      if (next === "dark") {
-        root.setAttribute("data-theme", "dark");
-      } else {
-        root.removeAttribute("data-theme");
-      }
-      localStorage.setItem("skyla-theme", next);
-      themeToggle.setAttribute("aria-label", next === "dark" ? "Switch to light mode" : "Switch to dark mode");
+
+      /* Black flash transition — exactly like dark teme.mp4:
+         light → black flash (~1 frame) → dark, instant hard cut */
+      var flash = document.createElement("div");
+      flash.className = "theme-flash";
+      document.body.appendChild(flash);
+
+      // Force reflow to ensure the transition triggers
+      void flash.offsetWidth;
+      flash.classList.add("active");
+
+      setTimeout(function () {
+        if (next === "dark") {
+          root.setAttribute("data-theme", "dark");
+        } else {
+          root.removeAttribute("data-theme");
+        }
+        localStorage.setItem("skyla-theme", next);
+        themeToggle.setAttribute("aria-label", next === "dark" ? "Switch to light mode" : "Switch to dark mode");
+
+        // Hide flash after a tiny delay for the hard-cut effect
+        setTimeout(function () {
+          flash.classList.remove("active");
+          setTimeout(function () {
+            if (flash.parentNode) flash.parentNode.removeChild(flash);
+          }, 60);
+        }, 30);
+      }, 35);
     });
     var savedTheme = localStorage.getItem("skyla-theme");
     if (savedTheme) {

@@ -21,11 +21,11 @@
   --white: #ffffff;
   --dark-slate-grey: #005775;
 
-  /* Light theme: warm cream/beige (from dark teme.mp4 frame 0) */
-  --bg-light: #e8e3dc;
-  --bg-light-2: #e9e4dd;
-  --card-light: #f4efec;
-  --card-light-2: #f2f0ee;
+  /* Light theme: Ready4S exact — white background (#ffffff) */
+  --bg-light: #ffffff;
+  --bg-light-2: #ffffff;
+  --card-light: #ffffff;
+  --card-light-2: #ffffff;
 
   --text: #03283d;
   --text-muted: rgba(3, 40, 61, 0.72);
@@ -45,8 +45,8 @@
 
   --maxw: 1250px;
 
-  /* Smooth theme transition */
-  --transition-theme: background-color .6s ease, color .6s ease, border-color .6s ease, box-shadow .6s ease, filter .6s ease;
+  /* Theme transition: instant hard cut with black flash (from dark teme.mp4) */
+  --transition-theme: background-color 0s, color 0s, border-color 0s, box-shadow 0s, filter 0s;
 }
 
 /* ---------- Dark theme (exact from dark teme.mp4: warm dark gray #3a3836) ---------- */
@@ -269,6 +269,20 @@
   color: var(--medium-sea-green);
 }
 
+/* ---------- Theme flash overlay (dark teme.mp4: instant black flash on toggle) ---------- */
+.theme-flash {
+  position: fixed;
+  inset: 0;
+  background: #000;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.05s linear;
+}
+.theme-flash.active {
+  opacity: 1;
+}
+
 /* ---------- Reset ---------- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
@@ -380,13 +394,33 @@ input, textarea, select { font-family: inherit; }
 .theme-toggle__icon { width: 20px; height: 20px; }
 .theme-toggle__icon--moon { display: none; }
 [data-theme="dark"] .section--dark {
-  background: linear-gradient(180deg, #010f18 0%, #031424 50%, #002d40 100%);
+  background: linear-gradient(180deg, #3a3836 0%, #373533 50%, #35302d 100%);
 }
+[data-theme="dark"] .section--dark .section__title { color: #f0ede8; }
+[data-theme="dark"] .section--dark .section__lead { color: rgba(240, 237, 232, 0.72); }
+[data-theme="dark"] .section--dark .section__kicker { color: #f0ede8; }
+[data-theme="dark"] .section--dark .section__head { color: rgba(240, 237, 232, 0.85); }
+[data-theme="dark"] .section--dark .split__title { color: #f0ede8; }
+[data-theme="dark"] .section--dark .split__text { color: rgba(240, 237, 232, 0.72); }
+[data-theme="dark"] .section--dark .split__content .link-arrow { color: var(--button-hover); }
+[data-theme="dark"] .section--dark .contact__title { color: #f0ede8; }
+[data-theme="dark"] .section--dark .contact__confidence { color: var(--button-hover); }
+[data-theme="dark"] .section--dark .contact__confidence svg { color: var(--button-hover); }
+[data-theme="dark"] .section--dark .contact__stat .stat__label { color: rgba(240, 237, 232, 0.72); }
+
+[data-theme="dark"] .footer {
+  background: #373533;
+}
+[data-theme="dark"] .footer__tagline { color: rgba(240, 237, 232, 0.7); }
+[data-theme="dark"] .footer__col h4 { color: rgba(240, 237, 232, 0.55); }
+[data-theme="dark"] .footer__col a, [data-theme="dark"] .footer__col span { color: rgba(240, 237, 232, 0.75); }
+[data-theme="dark"] .footer__bar { border-top-color: rgba(240, 237, 232, 0.12); }
+[data-theme="dark"] .footer__bar-inner { color: rgba(240, 237, 232, 0.55); }
 
 [data-theme="dark"] .theme-toggle {
-  background: rgba(255, 255, 255, .06);
-  border-color: rgba(255, 255, 255, .12);
-  color: #ffffff;
+  background: rgba(240, 237, 232, .06);
+  border-color: rgba(240, 237, 232, .12);
+  color: #f0ede8;
 }
 [data-theme="dark"] .theme-toggle:hover {
   border-color: var(--medium-sea-green);
@@ -493,40 +527,23 @@ input, textarea, select { font-family: inherit; }
 .section { padding: 90px 0; position: relative; transition: var(--transition-theme); }
 .section--alt { background: var(--alice-blue-2); }
 
-/* Soft blue-gray gradient tints matching Ready4S (hero, logos, testimonials, benefit) */
-#work { position: relative; }
-#work::before {
-  content: "";
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 30% 40% at 90% 50%, rgba(226, 236, 242, 0.6), transparent 75%),
-    radial-gradient(ellipse 20% 30% at 15% 70%, rgba(228, 237, 243, 0.5), transparent 75%);
-  pointer-events: none;
-  z-index: 0;
+/* Ready4S section tints: services has light blue #f2f9ff background */
+#services {
+  background: var(--lblue-bg);
 }
-#work > .container { position: relative; z-index: 1; }
 
+/* Testimonials section soft tints (Ready4S: subtle light blue-gray) */
 #testimonials { position: relative; }
 #testimonials::before {
   content: "";
   position: absolute; inset: 0;
   background:
-    radial-gradient(ellipse 35% 40% at 90% 30%, rgba(228, 236, 241, 0.5), transparent 75%),
-    radial-gradient(ellipse 25% 30% at 10% 70%, rgba(227, 236, 242, 0.45), transparent 75%);
+    radial-gradient(ellipse 35% 40% at 90% 30%, rgba(228, 236, 241, 0.4), transparent 75%),
+    radial-gradient(ellipse 25% 30% at 10% 70%, rgba(227, 236, 242, 0.35), transparent 75%);
   pointer-events: none;
   z-index: 0;
 }
 #testimonials > .container { position: relative; z-index: 1; }
-
-#experience { position: relative; }
-#experience::before {
-  content: "";
-  position: absolute; inset: 0;
-  background: radial-gradient(ellipse 40% 50% at 50% 100%, rgba(247, 249, 248, 0.6), transparent 75%);
-  pointer-events: none;
-  z-index: 0;
-}
-#experience > .container { position: relative; z-index: 1; }
 .divider {
   height: 34px; width: 100%;
   background: linear-gradient(to bottom, transparent, var(--alice-blue) 30%, var(--alice-blue) 70%, transparent);
