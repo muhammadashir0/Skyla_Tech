@@ -122,8 +122,8 @@
     }
 
     var btn = form.querySelector("button[type=submit]");
-    btn.disabled = true;
-    btn.textContent = "Sending…";
+    var originalText = btn ? btn.textContent : "Send";
+    if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
     status.textContent = "";
 
     /* Front-end demo: no backend is connected yet. Swap for a real
@@ -132,13 +132,69 @@
       status.textContent = "Thank you! Your submission has been received.";
       status.className = "form-status success";
       form.reset();
-      btn.disabled = false;
-      btn.textContent = "Send message";
+      if (btn) { btn.disabled = false; btn.textContent = originalText; }
     }, 900);
   });
 
   form.querySelectorAll("input, textarea").forEach(function (field) {
     field.addEventListener("input", function () { field.classList.remove("invalid"); });
+  });
+
+  /* ---------- Career form ---------- */
+  var careerForm = document.getElementById("careerForm");
+  var careerStatus = document.getElementById("careerFormStatus");
+
+  if (careerForm && careerStatus) {
+    careerForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var valid = true;
+      var required = careerForm.querySelectorAll("input[required], textarea[required]");
+      required.forEach(function (field) {
+        var ok = field.value.trim() !== "" && (!field.type || field.type !== "email" || /\S+@\S+\.\S+/.test(field.value));
+        field.classList.toggle("invalid", !ok);
+        if (!ok) valid = false;
+      });
+
+      if (!valid) {
+        careerStatus.textContent = "Please fill in all required fields with valid values.";
+        careerStatus.className = "form-status error";
+        return;
+      }
+
+      var btn = careerForm.querySelector("button[type=submit]");
+      var originalText = btn ? btn.textContent : "Send";
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      careerStatus.textContent = "";
+
+      setTimeout(function () {
+        careerStatus.textContent = "Thank you! Your CV has been received.";
+        careerStatus.className = "form-status success";
+        careerForm.reset();
+        if (btn) { btn.disabled = false; btn.textContent = originalText; }
+      }, 900);
+    });
+
+    careerForm.querySelectorAll("input, textarea").forEach(function (field) {
+      field.addEventListener("input", function () { field.classList.remove("invalid"); });
+    });
+  }
+
+  /* ---------- Blog filter ---------- */
+  var blogFilters = document.querySelectorAll(".blog-filter");
+  var blogCards = document.querySelectorAll(".blog-card");
+
+  blogFilters.forEach(function (filter) {
+    filter.addEventListener("click", function () {
+      var f = filter.dataset.filter;
+      blogFilters.forEach(function (b) { b.classList.remove("is-active"); });
+      filter.classList.add("is-active");
+
+      blogCards.forEach(function (card) {
+        var cat = card.dataset.category;
+        var show = f === "all" || cat === f;
+        card.style.display = show ? "" : "none";
+      });
+    });
   });
 
   /* ---------- Theme toggle (dark/light) ---------- */

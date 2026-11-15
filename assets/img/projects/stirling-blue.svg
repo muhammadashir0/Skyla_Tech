@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <rect width="800" height="600" fill="#2a2a4d"/>
+  <rect width="800" height="600" fill="url(#g)"/>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="800" y2="600" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#2a2a4d" stop-opacity="1"/>
+      <stop offset="1" stop-color="#000000" stop-opacity="0.4"/>
+    </linearGradient>
+  </defs>
+  <text x="400" y="310" text-anchor="middle" font-family="Poppins, sans-serif" font-size="36" font-weight="700" fill="rgba(255,255,255,0.9)">Stirling Blue</text>
+</svg>
