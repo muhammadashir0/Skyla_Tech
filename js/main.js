@@ -141,6 +141,38 @@
     field.addEventListener("input", function () { field.classList.remove("invalid"); });
   });
 
+  /* ---------- Theme toggle (dark/light) ---------- */
+  var themeToggle = document.getElementById("themeToggle");
+  var root = document.documentElement;
+
+  /* Apply saved theme before paint to avoid flash */
+  (function initTheme() {
+    var saved = localStorage.getItem("skyla-theme");
+    if (saved) {
+      root.setAttribute("data-theme", saved);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      root.setAttribute("data-theme", "dark");
+    }
+  })();
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      var next = current === "dark" ? "light" : "dark";
+      if (next === "dark") {
+        root.setAttribute("data-theme", "dark");
+      } else {
+        root.removeAttribute("data-theme");
+      }
+      localStorage.setItem("skyla-theme", next);
+      themeToggle.setAttribute("aria-label", next === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    });
+    var savedTheme = localStorage.getItem("skyla-theme");
+    if (savedTheme) {
+      themeToggle.setAttribute("aria-label", savedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    }
+  }
+
   /* ---------- Hue-based gradient media (case/project cards) ---------- */
   document.querySelectorAll("[data-hue]").forEach(function (el) {
     el.style.setProperty("--hue", el.dataset.hue);
