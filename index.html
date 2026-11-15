@@ -18,6 +18,7 @@
 
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
+    <div class="nav__cream-bar" aria-hidden="true"></div>
     <div class="container nav__inner">
             <a href="index.html" class="nav__logo" aria-label="Skyla Tech home">
         <img class="nav__logo-img" src="assets/logo/skylatech-logo-dark.svg" alt="Skyla Tech" />
@@ -54,51 +55,68 @@
 
   <!-- ============ HERO ============ -->
   <section class="hero" id="home">
-    <!-- Split hero: black left / light-blue right with contour lines -->
-    <div class="hero__split">
-      <div class="hero__split-left">
-        <p class="hero__kicker reveal">Custom software development company</p>
-        <h1 class="hero__title reveal">
+    <!-- Hero text area: white background with kicker, title, subtitle, CTA + floating Clutch & stat badges -->
+    <div class="container hero__content-area">
+      <div class="hero__text reveal">
+        <p class="hero__kicker">Custom software development company</p>
+        <h1 class="hero__title">
           We turn ideas into <span class="grad-text">custom software</span> development at scale.
         </h1>
-        <p class="hero__sub reveal">
+        <p class="hero__sub">
           Bring your products together to make a faster go to market, augment your IT team
           or optimize existing processes.
         </p>
-        <div class="hero__cta reveal">
-          <a href="#contact" class="btn btn--primary">Make an appointment</a>
+        <div class="hero__cta">
+          <a href="#contact" class="hero__cta-link">Make an appointment
+            <svg class="hero__cta-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
       </div>
-      <div class="hero__split-right">
+
+      <!-- Floating Clutch rating badge (right side, upper area) -->
+      <div class="hero__clutch-badge reveal">
+        <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
+        <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
+        <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
+        <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
+        <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
+        <span class="hero__clutch-text">5.0 Clutch rating</span>
+      </div>
+
+      <!-- Floating green stat badge (left side, below text) -->
+      <div class="hero__float-stat hero__float-stat--green reveal">
+        <span class="stat__num" data-count="85" data-suffix="+">85+</span>
+        <span class="stat__label">happy clients</span>
+      </div>
+
+      <!-- Floating blue stat badge (right side, lower area) -->
+      <div class="hero__float-stat hero__float-stat--blue reveal">
+        <span class="stat__num" data-count="79">79</span>
+        <span class="stat__label">finalized products</span>
+      </div>
+    </div>
+
+    <!-- Decorative split section: black left / light-blue right with contour lines -->
+    <div class="hero__split-decor">
+      <div class="hero__split-decor-left"></div>
+      <div class="hero__split-decor-right">
         <img src="assets/img/hero-contour.svg" alt="" aria-hidden="true" class="hero__contour" />
       </div>
     </div>
 
-    <!-- Dark navy section below hero -->
+    <!-- Dark navy section with dashboard visual -->
     <div class="hero__dark">
       <div class="container">
         <div class="hero__dark-grid">
           <div class="hero__dark-content reveal">
-            <div class="hero__clutch reveal">
-              <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
-              <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
-              <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
-              <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
-              <svg class="clutch-stars" viewBox="0 0 24 24" fill="#f5b301" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
-              <span class="hero__clutch-text">5.0 Clutch rating</span>
-            </div>
-            <div class="hero__stats-dark reveal">
-              <div class="stat">
-                <span class="stat__num stat__num--on-dark" data-count="85" data-suffix="+">85+</span>
-                <span class="stat__label">happy clients</span>
-              </div>
-              <div class="stat">
-                <span class="stat__num stat__num--on-dark" data-count="3" data-prefix="+">+3</span>
-                <span class="stat__label">years in business</span>
-              </div>
-            </div>
+            <p class="hero__dark-kicker reveal">We build software that works</p>
+            <h2 class="hero__dark-title reveal">Making business software that works</h2>
+            <p class="hero__dark-sub reveal">
+              From concept to deployment — we deliver custom software that scales with your business.
+            </p>
             <a href="mailto:contact@skylatech.dev" class="btn btn--ghost reveal">Make an appointment</a>
           </div>
+          <div class="hero__dark-divider" aria-hidden="true"></div>
           <div class="hero__dark-visual reveal">
             <img src="assets/img/hero-dashboard.svg" alt="" aria-hidden="true" />
           </div>
