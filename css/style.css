@@ -43,7 +43,7 @@
   --font-display: "Poppins", "Gilroy", system-ui, sans-serif;
   --font-body: "Noto Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
 
-  --maxw: 1620px;
+  --maxw: 1730px;
 
   /* Theme transition: instant hard cut with black flash (from dark teme.mp4) */
   --transition-theme: background-color 0s, color 0s, border-color 0s, box-shadow 0s, filter 0s;
