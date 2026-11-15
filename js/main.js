@@ -87,9 +87,9 @@
     counters.forEach(animateCount);
   }
 
-  /* ---------- Testimonial tabs ---------- */
-  var tabs = document.querySelectorAll(".tab");
-  var panels = document.querySelectorAll(".t-panel");
+  /* ---------- Testimonial tabs (horizontal + vertical) ---------- */
+  var tabs = document.querySelectorAll(".tab, .v-tab");
+  var panels = document.querySelectorAll(".t-panel, .v-panel");
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
       var idx = tab.dataset.tab;
