@@ -12,9 +12,6 @@
   <link rel="preload" href="assets/fonts/noto-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/poppins-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/noto-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/noto-sans-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/noto-sans-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body data-page="home">
@@ -22,21 +19,29 @@
   <!-- ============ NAV ============ -->
   <header class="nav" id="nav">
     <div class="container nav__inner">
-            <a href="index.html" class="nav__logo" aria-label="Skyla Tech home">
+      <a href="index.html" class="nav__logo" aria-label="Skyla Tech home">
         <img class="nav__logo-img" src="assets/logo/skylatech-logo-dark.svg" alt="Skyla Tech" />
       </a>
 
       <nav class="nav__links" id="navLinks" aria-label="Primary">
-        <a href="index.html" class="active">Home</a>
-        <a href="success-stories.html">Success stories</a>
-        <a href="how-we-work.html">How we work</a>
-        <a href="technology-stack.html">Technology stack</a>
-        <a href="approach.html">Approach</a>
-        <a href="#contact">Discover us</a>
+        <a href="success-stories.html" class="nav-link">success stories</a>
+        <a href="how-we-work.html" class="nav-link">how we work</a>
+        <a href="approach.html" class="nav-link">approach</a>
+        <a href="technology-stack.html" class="nav-link">technology stack</a>
+        <a href="career.html" class="nav-link">career</a>
+        <a href="blog.html" class="nav-link">blog</a>
+        <a href="#contact" class="button-sec navmenu">discover us</a>
       </nav>
 
       <div class="nav__actions">
-        <a href="#contact" class="btn btn--navy btn--sm">Let's talk</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
+          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
+          </svg>
+          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+          </svg>
+        </button>
         <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
           <span></span><span></span><span></span>
         </button>
@@ -44,429 +49,572 @@
     </div>
   </header>
 
-  <!-- ============ HERO ============ -->
-  <section class="hero" id="home">
-    <div class="hero__bg" aria-hidden="true">
-      <div class="grid-overlay"></div>
-      <div class="hero__glow"></div>
-    </div>
+  <main class="main-wrapper">
 
-    <div class="container hero__inner">
-      <p class="hero__kicker reveal">Custom software development company</p>
-      <h1 class="hero__title reveal">
-        We turn ideas into <span class="grad-text">custom software</span> development at scale.
-      </h1>
-      <p class="hero__sub reveal">
-        Bring your products together to make a faster go to market, augment your IT team
-        or optimize existing processes.
-      </p>
-      <div class="hero__cta reveal">
-        <a href="#contact" class="btn btn--primary">let's talk</a>
-      </div>
-
-      <div class="hero__stats reveal">
-        <div class="stat">
-          <span class="stat__num" data-count="85" data-suffix="+">85+</span>
-          <span class="stat__label">happy clients</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num" data-count="3" data-prefix="+">+3</span>
-          <span class="stat__label">years in business</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WORK WE LOVE ============ -->
-  <section class="section" id="work">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">Work we love</h2>
-        <p class="section__lead">Success stories from all over the world</p>
-      </div>
-
-      <!-- Swap with your real client logos (SVG recommended) -->
-      <div class="logos reveal" aria-label="Trusted by companies worldwide">
-        <div class="logos__track">
-          <img class="logos__item" src="assets/logo/clients/uber.svg" alt="Uber" />
-          <img class="logos__item" src="assets/logo/clients/roche.svg" alt="Roche" />
-          <img class="logos__item" src="assets/logo/clients/lexly.svg" alt="Lexly" />
-          <img class="logos__item" src="assets/logo/clients/trace-one.svg" alt="Trace One" />
-          <img class="logos__item" src="assets/logo/clients/wowstuff.svg" alt="Wow!Stuff" />
-          <img class="logos__item" src="assets/logo/clients/lumesse.svg" alt="Lumesse" />
-          <img class="logos__item" src="assets/logo/clients/eurofleet.svg" alt="Eurofleet" />
-          <!-- duplicate set for seamless loop -->
-          <img class="logos__item" src="assets/logo/clients/uber.svg" alt="Uber" />
-          <img class="logos__item" src="assets/logo/clients/roche.svg" alt="Roche" />
-          <img class="logos__item" src="assets/logo/clients/lexly.svg" alt="Lexly" />
-          <img class="logos__item" src="assets/logo/clients/trace-one.svg" alt="Trace One" />
-          <img class="logos__item" src="assets/logo/clients/wowstuff.svg" alt="Wow!Stuff" />
-          <img class="logos__item" src="assets/logo/clients/lumesse.svg" alt="Lumesse" />
-          <img class="logos__item" src="assets/logo/clients/eurofleet.svg" alt="Eurofleet" />
-        </div>
-      </div>
-
-      <div class="section__cta reveal">
-        <a href="success-stories.html" class="link-arrow">see all success stories</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ SERVICES ============ -->
-  <section class="section section--alt" id="services">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">Supercharge your company growth with our custom approach</h2>
-      </div>
-
-      <div class="cards">
-        <article class="card reveal">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.3 1 2.5h6c0-1.2.3-1.8 1-2.5A6 6 0 0 0 12 3Z" />
-              <path d="M12 7.5v4" />
-            </svg>
-          </div>
-          <h3 class="card__title">Innovate with you</h3>
-          <p class="card__text">
-            Focusing on hearing you and bringing to life new concepts helping to grasp
-            market opportunities by building proof of concepts or minimum valuable product.
-          </p>
-        </article>
-
-        <article class="card reveal">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M3 7l9-4 9 4-9 4-9-4Z" />
-              <path d="M3 7v6c0 1.5 4 2.5 9 2.5s9-1 9-2.5V7" />
-              <path d="M21 13v6" />
-            </svg>
-          </div>
-          <h3 class="card__title">Deliver full scope of work</h3>
-          <p class="card__text">
-            Full-stack, self managed teams that can build a custom, enterprise-grade solution.
-            From high-load systems to proof-of-concepts.
-          </p>
-        </article>
-
-        <article class="card reveal">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <circle cx="12" cy="12" r="9" />
-              <path d="M12 7v5l3 2" />
-            </svg>
-          </div>
-          <h3 class="card__title">Agile development</h3>
-          <p class="card__text">
-            We can help you build from scratch, upgrade, modernize platforms and applications
-            for high performance, better user experience, scale, and security.
-          </p>
-        </article>
-
-        <article class="card reveal">
-          <div class="card__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-              <path d="M3.3 7 12 12l8.7-5M12 22V12" />
-            </svg>
-          </div>
-          <h3 class="card__title">Modernize legacy technology</h3>
-          <p class="card__text">
-            Re-architecting legacy technology with a data migration plan for better user
-            experience to support digital transformation.
-          </p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ APPROACH / DEVELOPING THE FUTURE ============ -->
-  <section class="section section--dark" id="approach-home">
-    <div class="container">
-      <div class="split">
-        <div class="split__media reveal">
-          <img class="split__photo" src="assets/img/developing-future.jpg" alt="The Skyla Tech development team building custom software applications" />
-          <div class="split__badge">
-            <span class="stat__num stat__num--on-dark" data-count="25" data-suffix="+">25+</span>
-            <span class="split__badge-label">team members</span>
-          </div>
-        </div>
-
-        <div class="split__content">
-          <p class="section__kicker reveal">We will bring your company to the next level.</p>
-          <a href="how-we-work.html" class="link-arrow reveal">see how we work</a>
-
-          <h3 class="split__title reveal">Developing the future</h3>
-          <p class="split__text reveal">
-            Top class front-end technology, to build frictionless, custom web and mobile
-            applications which create extensive capabilities and cover all needs. Remarkable
-            back-end development services are designed with the best industry standards and
-            people with huge knowledge to build tailored and flexible solutions.
-          </p>
-          <a href="technology-stack.html" class="btn btn--ghost reveal">see our technology stack</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ============ EXPERIENCE / CEO ============ -->
-  <section class="section section--alt" id="experience">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">Benefit from our experience</h2>
-        <p class="section__lead">
-          Start from scratch or augment your team. We have programming expertise combined
-          with must-have soft skills.
-        </p>
-      </div>
-
-      <div class="experience-grid reveal">
-        <figure class="quote-card">
-        <svg class="quote-card__mark" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M7 7H4a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h3v2a3 3 0 0 1-3 3H4M17 7h-3a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h3v2a3 3 0 0 1-3 3h-1"
-                stroke="url(#quoteGrad)" stroke-width="2" stroke-linecap="round" />
-          <defs>
-            <linearGradient id="quoteGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-              <stop offset="0" stop-color="#00aa64" />
-              <stop offset="1" stop-color="#2ab673" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <blockquote class="quote-card__text">
-          We treat every engagement as a long-term partnership. Our engineers don't just write
-          code — they think like founders, own the outcomes, and deliver software that our
-          clients are proud to ship. That commitment is what sets Skyla Tech apart.
-        </blockquote>
-        <figcaption class="quote-card__author">
-          <span class="quote-card__avatar" aria-hidden="true">MA</span>
-          <span>
-            <strong>Muhammad Ashir</strong>
-            <small>CEO at Skyla Tech</small>
-          </span>
-        </figcaption>
-      </figure>
-
-        <figure class="experience-photo">
-          <img src="assets/img/experience.jpg" alt="The Skyla Tech team collaborating on client software projects" />
-        </figure>
-      </div>
-
-      <div class="section__cta reveal">
-        <a href="approach.html" class="link-arrow">see our approach</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ TESTIMONIALS ============ -->
-  <section class="section" id="testimonials">
-    <div class="container">
-      <div class="section__head reveal">
-        <h2 class="section__title">Clients testimonials</h2>
-        <p class="section__lead reveal-stat">
-          <span class="stat__num" data-count="599" data-suffix="+">599+</span> consultations this year
-        </p>
-      </div>
-
-      <div class="testimonials reveal">
-        <div class="testimonials__tabs" role="tablist" aria-label="Testimonials">
-          <button class="tab is-active" role="tab" aria-selected="true" data-tab="0">
-            <span class="tab__logo" aria-hidden="true">◆</span> Trace One
-          </button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="1">
-            <span class="tab__logo" aria-hidden="true">⬡</span> Roche
-          </button>
-          <button class="tab" role="tab" aria-selected="false" data-tab="2">
-            <span class="tab__logo" aria-hidden="true">▲</span> Uber
-          </button>
-        </div>
-
-        <div class="testimonials__panels">
-          <div class="t-panel is-active" data-panel="0">
-            <svg class="t-stars" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
-            <p class="t-quote">
-              Based on development velocity and quality, Skyla Tech is a top-level vendor,
-              on-par with the client's internal resources. Communication is smooth and
-              efficient, mirroring the ease of working with in-house developers. Skyla Tech's
-              work spurs few customer issues, which is evidence of their commitment.
-            </p>
-            <a class="t-link link-arrow" href="success-stories.html">client review</a>
-          </div>
-
-          <div class="t-panel" data-panel="1">
-            <svg class="t-stars" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
-            <p class="t-quote">
-              The app was successfully launched, garnering at least 25% of its target users,
-              and is still live. The schedule of the project was communicated well, and the
-              team was very supportive, providing mockups that could be tested with users,
-              and bringing both design and development expertize to the table.
-            </p>
-            <a class="t-link link-arrow" href="success-stories.html">client review</a>
-          </div>
-
-          <div class="t-panel" data-panel="2">
-            <svg class="t-stars" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2l2.9 6.3 6.8.9-5 4.6 1.3 6.7L12 17.3 5.9 20.5l1.3-6.7-5-4.6 6.8-.9L12 2z"/></svg>
-            <p class="t-quote">
-              Skyla Tech has a team of skilled problem solvers. They've delivered
-              high-quality work so far. The team is committed to the project and works
-              quickly. They follow a scrum methodology and they meet with their partners
-              weekly. They're strong collaborators and provide weekly demonstrations.
-            </p>
-            <a class="t-link link-arrow" href="success-stories.html">client review</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ CONTACT ============ -->
-  <section class="section section--contact section--dark" id="contact">
-    <div class="container">
-      <div class="contact">
-        <div class="contact__intro">
-          <h2 class="contact__title reveal">
-            Making business software that works. <span class="grad-text">Let's talk.</span>
-          </h2>
-          <div class="contact__stat reveal">
-            <span class="stat__num" data-count="79">79</span>
-            <span class="stat__label">finalized products</span>
-          </div>
-          <a href="mailto:contact@skylatech.dev" class="btn btn--ghost reveal">Make an appointment</a>
-          <p class="contact__confidence reveal">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M12 2l8 3.5v6c0 5-3.4 8.7-8 10.5-4.6-1.8-8-5.5-8-10.5v-6L12 2Z" />
-              <path d="M9 12l2 2 4-4" />
-            </svg>
-            We guarantee 100% confidentiality
-          </p>
-        </div>
-
-        <form class="contact__form reveal" id="contactForm" novalidate>
-          <div class="field">
-            <label for="name">Full name<span class="req">*</span></label>
-            <input type="text" id="name" name="name" required placeholder="Your name" autocomplete="name" />
-          </div>
-          <div class="field">
-            <label for="email">Email<span class="req">*</span></label>
-            <input type="email" id="email" name="email" required placeholder="you@company.com" autocomplete="email" />
-          </div>
-          <div class="field field--full">
-            <label for="message">Your message<span class="req">*</span></label>
-            <textarea id="message" name="message" rows="4" required placeholder="Tell us about your project…"></textarea>
-          </div>
-
-          <label class="check">
-            <input type="checkbox" id="nda" name="nda" />
-            <span class="check__box" aria-hidden="true"></span>
-            I want to sign an NDA first
-          </label>
-
-          <div class="field-grid">
-            <div class="field">
-              <label for="fe">Preferable front-end technology</label>
-              <select id="fe" name="frontend">
-                <option>Angular</option>
-                <option selected>React</option>
-                <option>Vue</option>
-                <option>Other</option>
-              </select>
+    <!-- ============ HERO ============ -->
+    <header class="section-hp-hero">
+      <div class="container">
+        <div class="padding-vertical padding-large-hero">
+          <div class="hp-hero_component">
+            <div class="hp-hero_content-wrapper">
+              <h1 class="hp-hero_title">We turn ideas into <span class="green_txt-span">custom software</span> development at scale.</h1>
+              <div class="margin-top margin-small">
+                <p class="hp-hero_paragraf">Bring your products together to make a faster go to market, augment your IT team or optimize existing processes.</p>
+              </div>
+              <div class="margin-top margin-small">
+                <a href="#contact" class="button">let's talk</a>
+              </div>
             </div>
-            <div class="field">
-              <label for="be">Preferable back-end technology</label>
-              <select id="be" name="backend">
-                <option>Node.JS</option>
-                <option>PHP</option>
-                <option>Java</option>
-                <option selected>.Net(C#)</option>
-                <option>Other</option>
-              </select>
+
+            <div class="hp-hero-references_wrapper">
+              <div class="hp-hero-experience">
+                <div class="value-component">
+                  <div class="value-txt">
+                    <span class="value-txt_large">+10</span> years<br>
+                  </div>
+                  <div class="value-txt light">in business</div>
+                </div>
+              </div>
+
+              <div class="hp-hero-clutch">
+                <div class="clutch-wrapper">
+                  <svg class="clutch-logo" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1a1a2e"/><text x="24" y="31" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" font-weight="bold">Clutch</text></svg>
+                </div>
+                <div class="arrow_wrapper">
+                  <svg class="image-2" viewBox="0 0 120 24" aria-hidden="true">
+                    <circle cx="12" cy="12" r="5" fill="#f5b301"/><circle cx="30" cy="12" r="5" fill="#f5b301"/><circle cx="48" cy="12" r="5" fill="#f5b301"/><circle cx="66" cy="12" r="5" fill="#f5b301"/><circle cx="84" cy="12" r="5" fill="#f5b301"/>
+                  </svg>
+                  <div class="value-txt light">4.8</div>
+                </div>
+              </div>
+
+              <div class="hp-hero-uber">
+                <div class="black_circle-wrapper">
+                  <svg class="uber-image" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#000"/><text x="24" y="31" text-anchor="middle" fill="#fff" font-size="14" font-family="Arial" font-weight="bold">Uber</text></svg>
+                </div>
+                <div class="hp-hero_testimonial-txt">
+                  <div>"They solve the problems. They listen and provide professional work for us."</div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="field-grid">
-            <div class="field">
-              <label for="goal">What would you like to do?</label>
-              <select id="goal" name="goal">
-                <option>Team augumentation</option>
-                <option selected>New idea</option>
-                <option>Ongoing project</option>
-                <option>Other</option>
-              </select>
+          <div class="margin-top margin-huge logo-homepage">
+            <div class="hp-hero-logos_component">
+              <div class="logo_item">
+                <img src="assets/logo/clients/uber.svg" alt="uber logo" class="hp-hero-logo_image" />
+              </div>
+              <div class="logo_item">
+                <img src="assets/logo/clients/roche.svg" alt="roche logo" class="hp-hero-logo_image" />
+              </div>
+              <div class="logo_item">
+                <img src="assets/logo/clients/lexly.svg" alt="lexly logo" class="hp-hero-logo_image" />
+              </div>
+              <div class="logo_item">
+                <img src="assets/logo/clients/trace-one.svg" alt="trace one logo" class="hp-hero-logo_image" />
+              </div>
+              <div class="logo_item">
+                <img src="assets/logo/clients/luesse.svg" alt="luesse logo" class="hp-hero-logo_image" />
+              </div>
             </div>
-            <div class="field">
-              <label for="ref">How did you hear about us?</label>
-              <select id="ref" name="referral">
-                <option selected>—</option>
-                <option>Search engine</option>
-                <option>Referral</option>
-                <option>Social media</option>
-                <option>Event / conference</option>
-                <option>Other</option>
-              </select>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- ============ WORK WE LOVE ============ -->
+    <section class="section-hp-success-stories">
+      <div class="container">
+        <div class="padding-vertical padding-xhuge">
+          <div class="hp-right_heading-wrapper">
+            <div class="success-experience">
+              <div class="value-component right">
+                <div class="value-txt">
+                  <span class="value-txt_large">85+</span><br>
+                </div>
+                <div class="value-txt light">happy clients</div>
+              </div>
+            </div>
+            <div class="text-align-right">
+              <h2>Work we <span class="green_txt-span">love</span></h2>
+              <div class="subheading-txt">Success stories from all over the world</div>
             </div>
           </div>
 
-          <button type="submit" class="btn btn--primary btn--block">Make an appointment</button>
+          <div class="margin-top margin-medium">
+            <div class="_3-success-stories_component">
+              <a href="clients/uber.html" class="_3-success-stories_item uber">
+                <img src="assets/logo/clients/uber.svg" alt="uber logo" class="ss-item-logo_image" />
+              </a>
+              <a href="clients/roche.html" class="_3-success-stories_item roche">
+                <img src="assets/logo/clients/roche.svg" alt="roche logo" class="ss-item-logo_image" />
+              </a>
+              <a href="clients/lexly.html" class="_3-success-stories_item lexly">
+                <img src="assets/logo/clients/lexly.svg" alt="lexly logo" class="ss-item-logo_image" />
+              </a>
+            </div>
+          </div>
 
-          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
-        </form>
+          <div class="margin-top margin-huge">
+            <div class="align-center">
+              <a href="success-stories.html" class="button">see all success stories</a>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- ============ SUPERCHARGE YOUR COMPANY ============ -->
+    <section class="section-hp-supercharge">
+      <div class="container">
+        <div class="padding-vertical padding-xhuge">
+          <div class="hp-heading-left_wrapper">
+            <h2 class="max-width-large">Supercharge your company <span class="green_txt-span">growth</span> with our custom approach</h2>
+            <div class="supercharge-experience">
+              <div class="value-component top">
+                <div class="value-txt text-align-right">
+                  <span class="value-txt_large">1150+</span><br>
+                </div>
+                <div class="value-txt light">consultations this year</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="margin-top margin-huge">
+            <div class="carts_component">
+              <div class="cart_item">
+                <div class="cart-icon_wrapper">
+                  <svg class="cart-icon_image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.3 1 2.5h6c0-1.2.3-1.8 1-2.5A6 6 0 0 0 12 3Z" />
+                    <path d="M12 7.5v4" />
+                  </svg>
+                </div>
+                <div class="margin-top margin-small">
+                  <h3>Innovate with you</h3>
+                </div>
+                <div class="margin-top margin-small">
+                  <p>Focusing on hearing you and bringing to life new concepts helping to grasp market opportunities by building proof of concepts or minimum valuable product.</p>
+                </div>
+              </div>
+              <div class="cart_item">
+                <div class="cart-icon_wrapper">
+                  <svg class="cart-icon_image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 7l9-4 9 4-9 4-9-4Z" />
+                    <path d="M3 7v6c0 1.5 4 2.5 9 2.5s9-1 9-2.5V7" />
+                    <path d="M21 13v6" />
+                  </svg>
+                </div>
+                <div class="margin-top margin-small">
+                  <h3>Deliver full scope of work</h3>
+                </div>
+                <div class="margin-top margin-small">
+                  <p>Full-stack, self managed teams that can build a custom, enterprise-grade solution. From high-load systems to proof-of-concepts.</p>
+                </div>
+              </div>
+              <div class="cart_item">
+                <div class="cart-icon_wrapper">
+                  <svg class="cart-icon_image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <circle cx="12" cy="12" r="9" />
+                    <path d="M12 7v5l3 2" />
+                  </svg>
+                </div>
+                <div class="margin-top margin-small">
+                  <h3>Agile development</h3>
+                </div>
+                <div class="margin-top margin-small">
+                  <p>We can help you build from scratch, upgrade, modernize platforms and applications for high performance, better user experience, scale, and security.</p>
+                </div>
+              </div>
+              <div class="cart_item">
+                <div class="cart-icon_wrapper">
+                  <svg class="cart-icon_image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                    <path d="M3.3 7 12 12l8.7-5M12 22V12" />
+                  </svg>
+                </div>
+                <div class="margin-top margin-small">
+                  <h3>Modernize legacy technology</h3>
+                </div>
+                <div class="margin-top margin-small">
+                  <p>Re-architecting legacy technology with a data migration plan for better user experience to support digital transformation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA BANNER ============ -->
+    <section class="section-cta">
+      <div class="container">
+        <div class="padding-vertical padding-huge">
+          <div class="cta_component">
+            <div class="cta_content">
+              <h4 class="heading-medium">We will bring your company to the next level.</h4>
+            </div>
+            <div class="cta_button">
+              <a href="how-we-work.html" class="button">see how we work</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ DEVELOPING THE FUTURE ============ -->
+    <section class="section-developing-the-future">
+      <div class="container">
+        <div class="padding-vertical padding-huge">
+          <div class="developing-future_component">
+            <div class="develooping-image_item">
+              <img src="assets/img/developing-future.webp" alt="developing the future image" class="developing_image" />
+              <div class="hp-team-members">
+                <div class="value-component">
+                  <div class="value-txt">
+                    <span class="value-txt_large">50+</span><br>
+                  </div>
+                  <div class="value-txt light">team members</div>
+                </div>
+              </div>
+            </div>
+            <div class="feature-txt_item">
+              <div class="margin-bottom margin-small">
+                <h3>Developing the <span class="green_txt-span">future</span></h3>
+              </div>
+              <p>Top class front-end technology, to build frictionless, custom web and mobile applications which create extensive capabilities and cover all needs. Remarkable back-end development services are designed with the best industry standards and people with huge knowledge to build tailored and flexible solutions.</p>
+              <div class="margin-top margin-small">
+                <a href="technology-stack.html" class="button">see our technology stack</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BENEFIT FROM OUR EXPERIENCE ============ -->
+    <section class="section-befefit">
+      <div class="container">
+        <div class="padding-vertical padding-huge">
+          <div class="benefit_component">
+            <img src="assets/img/benefit-image.png" alt="" class="benefit_image" />
+            <div class="benefit_content">
+              <h2>Benefit from our experience</h2>
+              <div class="margin-top margin-small">
+                <div class="benefit-txt">Start from scratch or augment your team. We have programming expertise combined with must-have soft skills.</div>
+              </div>
+              <div class="margin-top margin-small">
+                <div class="benefit-name-txt">Muhammad Ashir - CEO at Skyla Tech</div>
+              </div>
+              <div class="margin-top margin-medium">
+                <a href="approach.html" class="button">see our approach</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CLIENTS TESTIMONIALS ============ -->
+    <section class="section-client-testimonials">
+      <div class="container">
+        <div class="padding-vertical padding-xhuge">
+          <div class="margin-bottom margin-huge">
+            <div class="hp-heading-left_wrapper">
+              <h2 class="max-width-large">Clients <span class="green_txt-span">testimonials</span><br></h2>
+              <div class="client-testimonials">
+                <div class="value-component up-right">
+                  <div class="value-txt text-align-right">
+                    <span class="value-txt_large">1150+</span><br>
+                  </div>
+                  <div class="value-txt light">consultations this year</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="client-testimonials_component">
+            <div class="testimonials_tabs" role="tablist">
+              <div class="testimonials_tabs-menu" role="tablist">
+                <button class="testimonials_tab-link is-active" role="tab" aria-selected="true" data-tab="0">
+                  <div class="testimonials_tab-link_wrapper">
+                    <div class="tab_image-wrapper">
+                      <div class="white_circle-wrapper">
+                        <img src="assets/logo/clients/trace-one.svg" alt="" class="testimonial-on-white-image" />
+                      </div>
+                      <svg class="tab_image-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </div>
+                    <div class="testimonial_tab-content">
+                      <div class="test-brand-name_txt">Trace One</div>
+                    </div>
+                  </div>
+                </button>
+                <button class="testimonials_tab-link" role="tab" aria-selected="false" data-tab="1">
+                  <div class="testimonials_tab-link_wrapper">
+                    <div class="tab_image-wrapper">
+                      <div class="white_circle-wrapper roche">
+                        <img src="assets/logo/clients/roche.svg" alt="" class="testimonial-on-white-image" />
+                      </div>
+                      <svg class="tab_image-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </div>
+                    <div class="testimonial_tab-content">
+                      <div class="test-brand-name_txt">Roche</div>
+                    </div>
+                  </div>
+                </button>
+                <button class="testimonials_tab-link" role="tab" aria-selected="false" data-tab="2">
+                  <div class="testimonials_tab-link_wrapper">
+                    <div class="tab_image-wrapper">
+                      <div class="black_circle-wrapper">
+                        <img src="assets/logo/clients/uber.svg" alt="" class="uber-image" />
+                      </div>
+                      <svg class="tab_image-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                    </div>
+                    <div class="testimonial_tab-content">
+                      <div class="test-brand-name_txt">Uber</div>
+                    </div>
+                  </div>
+                </button>
+              </div>
+
+              <div class="tabs-content">
+                <div class="tab-pane is-active" data-panel="0">
+                  <div class="tab-pane_content">
+                    <div class="margin-bottom margin-small">
+                      <svg class="t-stars" viewBox="0 0 120 24" fill="currentColor" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"/><circle cx="30" cy="12" r="5"/><circle cx="48" cy="12" r="5"/><circle cx="66" cy="12" r="5"/><circle cx="84" cy="12" r="5"/>
+                      </svg>
+                    </div>
+                    <div class="margin-bottom margin-small">
+                      <div class="testimonial_txt">Based on development velocity and quality, Skyla Tech is a top-level vendor, on-par with the client's internal resources. Communication is smooth and efficient, mirroring the ease of working with in-house developers. Skyla Tech's work spurs few customer issues, which is evidence of their commitment.</div>
+                    </div>
+                    <div class="margin-top margin-medium">
+                      <a href="clients/e-sourcing.html" class="button">client review</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" data-panel="1">
+                  <div class="tab-pane_content">
+                    <div class="margin-bottom margin-small">
+                      <svg class="t-stars" viewBox="0 0 120 24" fill="currentColor" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"/><circle cx="30" cy="12" r="5"/><circle cx="48" cy="12" r="5"/><circle cx="66" cy="12" r="5"/><circle cx="84" cy="12" r="5"/>
+                      </svg>
+                    </div>
+                    <div class="margin-bottom margin-small">
+                      <div class="testimonial_txt">The app was successfully launched, garnering at least 25% of its target users, and is still live. The schedule of the project was communicated well, and the team was very supportive, providing mockups that could be tested with users, and bringing both design and development expertize to the table.</div>
+                    </div>
+                    <div class="margin-top margin-medium">
+                      <a href="clients/roche.html" class="button">client review</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="tab-pane" data-panel="2">
+                  <div class="tab-pane_content">
+                    <div class="margin-bottom margin-small">
+                      <svg class="t-stars" viewBox="0 0 120 24" fill="currentColor" aria-hidden="true">
+                        <circle cx="12" cy="12" r="5"/><circle cx="30" cy="12" r="5"/><circle cx="48" cy="12" r="5"/><circle cx="66" cy="12" r="5"/><circle cx="84" cy="12" r="5"/>
+                      </svg>
+                    </div>
+                    <div class="margin-bottom margin-small">
+                      <div class="testimonial_txt">Skyla Tech has a team of skilled problem solvers. They've delivered high-quality work so far. The team is committed to the project and works quickly. They follow a scrum methodology and they meet with their partners weekly. They're strong collaborators and provide weekly demonstrations.</div>
+                    </div>
+                    <div class="margin-top margin-medium">
+                      <a href="clients/uber.html" class="button">client review</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <img src="assets/img/topo-testimonials.svg" alt="" class="testimonials_bg-image" />
+      </div>
+    </section>
+
+    <!-- ============ CONTACT FORM ============ -->
+    <section class="section-form" id="contact">
+      <div class="container">
+        <div class="padding-vertical padding-xhuge">
+          <div class="margin-bottom margin-large">
+            <div class="hp-right_heading-wrapper">
+              <div class="text-align-right">
+                <h2 class="form_heading">Making business software that works. <span class="green_txt-span">Let's talk.</span></h2>
+              </div>
+              <div class="finalized-product">
+                <div class="value-component up-right">
+                  <div class="value-txt">
+                    <span class="value-txt_large">+100</span><br>
+                  </div>
+                  <div class="value-txt light">finalized products</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="margin-bottom margin-medium">
+            <div class="subheading-txt">Make an appointment</div>
+          </div>
+
+          <form class="form_component" id="contactForm" novalidate>
+            <div class="form_left-wrapper">
+              <div class="margin-bottom margin-medium">
+                <div class="form-field_wrapper">
+                  <label for="full-name" class="form_field-label">Full name*</label>
+                  <input class="form_txt-field" maxlength="256" name="full-name" placeholder="Enter your full name" type="text" id="full-name" required />
+                </div>
+              </div>
+              <div class="margin-bottom margin-medium">
+                <div class="form-field_wrapper">
+                  <label for="email" class="form_field-label">Email*</label>
+                  <input class="form_txt-field" maxlength="256" name="email" placeholder="Enter your email address" type="email" id="email" required />
+                </div>
+              </div>
+              <div class="margin-bottom margin-medium">
+                <div class="form-field_wrapper">
+                  <label for="message" class="form_field-label">Your message*</label>
+                  <input class="form_txt-field message" maxlength="256" name="message" placeholder="Write your message here..." type="text" id="message" required />
+                </div>
+              </div>
+              <div class="form-field_wrapper">
+                <label class="form-checkbox">
+                  <input type="checkbox" name="nda" id="nda" style="opacity:0;position:absolute;z-index:-1" />
+                  <span class="form-checkbox-icon" aria-hidden="true"></span>
+                  <span class="form-checkbox-label">I want to sign an NDA first</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="form_right-wrapper">
+              <div class="margin-bottom margin-medium">
+                <div class="form-field_wrapper">
+                  <label class="form_field-label">Preferable front-end technology</label>
+                  <div class="form-checkbox_wrapper">
+                    <label class="form-checkbox"><input type="checkbox" name="angular" id="angular" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Angular</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="react" id="react" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">React</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="vue" id="vue" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Vue</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="other-fe" id="other-fe" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Other</span></label>
+                  </div>
+                </div>
+              </div>
+              <div class="margin-bottom margin-medium">
+                <div class="form-field_wrapper">
+                  <label class="form_field-label">Preferable back-end technology</label>
+                  <div class="form-checkbox_wrapper">
+                    <label class="form-checkbox"><input type="checkbox" name="nodejs" id="nodejs" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Node.JS</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="php" id="php" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">PHP</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="java" id="java" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Java</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="net" id="net" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">.Net(C#)</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="other-be" id="other-be" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Other</span></label>
+                  </div>
+                </div>
+              </div>
+              <div class="margin-bottom margin-medium">
+                <div class="form-field_wrapper">
+                  <label class="form_field-label">What would you like to do?</label>
+                  <div class="form-checkbox_wrapper">
+                    <label class="form-checkbox"><input type="checkbox" name="team-aug" id="team-aug" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Team augumentation</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="new-idea" id="new-idea" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">New idea</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="ongoing" id="ongoing" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Ongoing project</span></label>
+                    <label class="form-checkbox"><input type="checkbox" name="other-todo" id="other-todo" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Other</span></label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-field_wrapper">
+                <label for="hear-about" class="form_field-label">How did you hear about us?</label>
+                <input class="form_txt-field hear-about-us" maxlength="256" name="hear-about-us" placeholder="How did you hear about us?" type="text" id="hear-about" />
+              </div>
+              <div class="margin-top margin-medium">
+                <div class="form-button_wrapper">
+                  <div class="form-button-disclaimer_wrapper">
+                    <div class="margin-right margin-xsmall">
+                      <svg class="form-discl_image" viewBox="0 0 24 24" fill="none" stroke="#00a964" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3.5v6c0 5-3.4 8.7-8 10.5-4.6-1.8-8-5.5-8-10.5v-6L12 2Z" /><path d="M9 12l2 2 4-4" /></svg>
+                    </div>
+                    <div class="form-adnotation_text">We guarantee 100% confidentiality</div>
+                  </div>
+                  <button type="submit" class="button-sec" data-wait="Please wait...">send your message</button>
+                </div>
+              </div>
+
+              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-              <a href="index.html" class="nav__logo" aria-label="Skyla Tech home">
-        <img class="nav__logo-img" src="assets/logo/skylatech-logo.svg" alt="Skyla Tech" />
-      </a>
-        <p class="footer__tagline">Custom software development company — we turn ideas into software at scale.</p>
-
-        <!-- Premium socials — swap hrefs for your real profiles -->
-        <div class="footer__socials">
-          <a class="social" href="https://linkedin.com" target="_blank" rel="noopener" aria-label="Skyla Tech on LinkedIn" title="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9Z"/></svg>
-          </a>
-          <a class="social" href="https://github.com" target="_blank" rel="noopener" aria-label="Skyla Tech on GitHub" title="GitHub">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.49 0-.24-.01-.88-.01-1.73-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.64.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.37-2.22-.26-4.55-1.14-4.55-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.27 2.75 1.05A9.36 9.36 0 0 1 12 6.84c.85 0 1.71.12 2.51.34 1.91-1.32 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9 0 1.37-.01 2.47-.01 2.81 0 .27.18.6.69.49A10.02 10.02 0 0 0 22 12.25C22 6.58 17.52 2 12 2Z"/></svg>
-          </a>
-          <a class="social" href="https://x.com" target="_blank" rel="noopener" aria-label="Skyla Tech on X" title="X">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644Z"/></svg>
-          </a>
-          <a class="social" href="https://instagram.com" target="_blank" rel="noopener" aria-label="Skyla Tech on Instagram" title="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" /></svg>
-          </a>
+    <div class="container">
+      <div class="padding-vertical padding-large">
+        <div class="margin-bottom margin-small">
+          <img src="assets/logo/skylatech-logo.svg" alt="" />
+        </div>
+        <div class="text-color-white">
+          <div class="footer-cta_component">
+            <div class="footer_item">
+              <h4>Address</h4>
+              <div class="text-size-small">
+                <div>Ilmenau, Thuringia<br>Germany</div>
+                <div class="margin-top margin-xsmall">
+                  <div class="footer-link_wrapper">
+                    <a href="mailto:contact@skylatech.dev" class="footer_link-block">contact@skylatech.dev<br></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer_item">
+              <h4>Resources</h4>
+              <div class="text-size-small">
+                <div class="margin-top margin-xsmall">
+                  <div class="footer-link_wrapper">
+                    <a href="success-stories.html" class="footer_link-block">Success Stories<br></a>
+                    <a href="how-we-work.html" class="footer_link-block">How we work<br></a>
+                    <a href="approach.html" class="footer_link-block">Approach<br></a>
+                    <a href="technology-stack.html" class="footer_link-block">Technology stack<br></a>
+                    <a href="blog.html" class="footer_link-block">Blog<br></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer_item">
+              <h4>Company</h4>
+              <div class="text-size-small">
+                <div class="margin-top margin-xsmall">
+                  <div class="footer-link_wrapper">
+                    <a href="career.html" class="footer_link-block">Careers<br></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="footer-social_wrapper">
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social_link-block">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9Z"/></svg>
+              </a>
+              <a href="https://x.com" target="_blank" rel="noopener" class="footer-social_link-block">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644Z"/></svg>
+              </a>
+              <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social_link-block">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" /></svg>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="footer__cols">
-        <div class="footer__col">
-          <h4>Company</h4>
-          <a href="success-stories.html">Success stories</a>
-          <a href="how-we-work.html">How we work</a>
-          <a href="technology-stack.html">Technology stack</a>
-          <a href="approach.html">Approach</a>
+      <div class="container">
+        <div class="padding-vertical padding-small">
+          <div class="text-color-white">
+            <div class="text-size-small">
+              <div class="footer_bottom">
+                <div class="footer-copyright_txt">Copyright © 2012-2024 Skyla Tech - The greatest software for a great business.</div>
+                <a href="nda.html" class="footer-bottom_link">NDA</a>
+                <a href="privacy-policy.html" class="footer-bottom_link">Privacy Policy</a>
+                <a href="candidates-clause.html" class="footer-bottom_link">Information Clause for Candidates<br></a>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="footer__col">
-          <h4>Contact</h4>
-          <a href="#contact">Make an appointment</a>
-          <a href="mailto:contact@skylatech.dev">contact@skylatech.dev</a>
-          <span>Ilmenau, Thuringia</span>
-          <span>Germany</span>
-        </div>
-        <div class="footer__col">
-          <h4>Start a project</h4>
-          <a href="#contact" class="footer__cta">Let's talk →</a>
-          <a href="success-stories.html" class="footer__cta">See our work →</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer__bar">
-      <div class="container footer__bar-inner">
-        <span>© <span id="year"></span> Skyla Tech. All rights reserved.</span>
-        <span class="footer__made">Making business software that works.</span>
       </div>
     </div>
   </footer>

@@ -87,9 +87,9 @@
     counters.forEach(animateCount);
   }
 
-  /* ---------- Testimonial tabs ---------- */
-  var tabs = document.querySelectorAll(".tab");
-  var panels = document.querySelectorAll(".t-panel");
+  /* ---------- Testimonial tabs (horizontal + vertical) ---------- */
+  var tabs = document.querySelectorAll(".tab, .v-tab, .testimonials_tab-link");
+  var panels = document.querySelectorAll(".t-panel, .v-panel, .tab-pane");
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
       var idx = tab.dataset.tab;
@@ -122,8 +122,8 @@
     }
 
     var btn = form.querySelector("button[type=submit]");
-    btn.disabled = true;
-    btn.textContent = "Sending…";
+    var originalText = btn ? btn.textContent : "Send";
+    if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
     status.textContent = "";
 
     /* Front-end demo: no backend is connected yet. Swap for a real
@@ -132,14 +132,123 @@
       status.textContent = "Thank you! Your submission has been received.";
       status.className = "form-status success";
       form.reset();
-      btn.disabled = false;
-      btn.textContent = "Send message";
+      if (btn) { btn.disabled = false; btn.textContent = originalText; }
     }, 900);
   });
 
   form.querySelectorAll("input, textarea").forEach(function (field) {
     field.addEventListener("input", function () { field.classList.remove("invalid"); });
   });
+
+  /* ---------- Career form ---------- */
+  var careerForm = document.getElementById("careerForm");
+  var careerStatus = document.getElementById("careerFormStatus");
+
+  if (careerForm && careerStatus) {
+    careerForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var valid = true;
+      var required = careerForm.querySelectorAll("input[required], textarea[required]");
+      required.forEach(function (field) {
+        var ok = field.value.trim() !== "" && (!field.type || field.type !== "email" || /\S+@\S+\.\S+/.test(field.value));
+        field.classList.toggle("invalid", !ok);
+        if (!ok) valid = false;
+      });
+
+      if (!valid) {
+        careerStatus.textContent = "Please fill in all required fields with valid values.";
+        careerStatus.className = "form-status error";
+        return;
+      }
+
+      var btn = careerForm.querySelector("button[type=submit]");
+      var originalText = btn ? btn.textContent : "Send";
+      if (btn) { btn.disabled = true; btn.textContent = "Sending…"; }
+      careerStatus.textContent = "";
+
+      setTimeout(function () {
+        careerStatus.textContent = "Thank you! Your CV has been received.";
+        careerStatus.className = "form-status success";
+        careerForm.reset();
+        if (btn) { btn.disabled = false; btn.textContent = originalText; }
+      }, 900);
+    });
+
+    careerForm.querySelectorAll("input, textarea").forEach(function (field) {
+      field.addEventListener("input", function () { field.classList.remove("invalid"); });
+    });
+  }
+
+  /* ---------- Blog filter ---------- */
+  var blogFilters = document.querySelectorAll(".blog-filter");
+  var blogCards = document.querySelectorAll(".blog-card");
+
+  blogFilters.forEach(function (filter) {
+    filter.addEventListener("click", function () {
+      var f = filter.dataset.filter;
+      blogFilters.forEach(function (b) { b.classList.remove("is-active"); });
+      filter.classList.add("is-active");
+
+      blogCards.forEach(function (card) {
+        var cat = card.dataset.category;
+        var show = f === "all" || cat === f;
+        card.style.display = show ? "" : "none";
+      });
+    });
+  });
+
+  /* ---------- Theme toggle (dark/light) ---------- */
+  var themeToggle = document.getElementById("themeToggle");
+  var root = document.documentElement;
+
+  /* Apply saved theme before paint to avoid flash */
+  (function initTheme() {
+    var saved = localStorage.getItem("skyla-theme");
+    if (saved) {
+      root.setAttribute("data-theme", saved);
+    } else if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      root.setAttribute("data-theme", "dark");
+    }
+  })();
+
+  if (themeToggle) {
+    themeToggle.addEventListener("click", function () {
+      var current = root.getAttribute("data-theme") === "dark" ? "dark" : "light";
+      var next = current === "dark" ? "light" : "dark";
+
+      /* Black flash transition — exactly like dark teme.mp4:
+         light → black flash (~1 frame) → dark, instant hard cut */
+      var flash = document.createElement("div");
+      flash.className = "theme-flash";
+      document.body.appendChild(flash);
+
+      // Force reflow to ensure the transition triggers
+      void flash.offsetWidth;
+      flash.classList.add("active");
+
+      setTimeout(function () {
+        if (next === "dark") {
+          root.setAttribute("data-theme", "dark");
+        } else {
+          root.removeAttribute("data-theme");
+        }
+        localStorage.setItem("skyla-theme", next);
+        themeToggle.setAttribute("aria-label", next === "dark" ? "Switch to light mode" : "Switch to dark mode");
+
+        // Hide flash after a tiny delay for the hard-cut effect
+        setTimeout(function () {
+          flash.classList.remove("active");
+          setTimeout(function () {
+            if (flash.parentNode) flash.parentNode.removeChild(flash);
+          }, 60);
+        }, 30);
+      }, 35);
+    });
+    var savedTheme = localStorage.getItem("skyla-theme");
+    if (savedTheme) {
+      themeToggle.setAttribute("aria-label", savedTheme === "dark" ? "Switch to light mode" : "Switch to dark mode");
+    }
+  }
 
   /* ---------- Hue-based gradient media (case/project cards) ---------- */
   document.querySelectorAll("[data-hue]").forEach(function (el) {
