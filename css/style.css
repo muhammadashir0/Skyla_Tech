@@ -18,7 +18,7 @@
   --lblue-bg: #f2f9ff;
   --hover-secondary: #053a4f;
   --light-grey: #d7cfca;
-  --white: #ffffff;
+  --white: white;
   --dark-slate-grey: #005775;
 
   /* Light theme: Ready4S exact — white background (#ffffff) */
@@ -308,15 +308,18 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; scroll-padding-top: 90px; }
 body {
-  font-family: var(--font-body);
+  -webkit-locale: "en";
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  font-family: sans-serif;
+  height: 100%;
   color: var(--text);
   background: var(--bg-light);
   background-image: radial-gradient(circle, rgba(3, 40, 61, .05) 1.5px, transparent 1.5px);
   background-size: 28px 28px;
   font-size: 1rem;
   line-height: 1.7;
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
   overflow-x: hidden;
   transition: var(--transition-theme);
 }
