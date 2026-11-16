@@ -88,8 +88,8 @@
   }
 
   /* ---------- Testimonial tabs (horizontal + vertical) ---------- */
-  var tabs = document.querySelectorAll(".tab, .v-tab");
-  var panels = document.querySelectorAll(".t-panel, .v-panel");
+  var tabs = document.querySelectorAll(".tab, .v-tab, .testimonials_tab-link");
+  var panels = document.querySelectorAll(".t-panel, .v-panel, .tab-pane");
   tabs.forEach(function (tab) {
     tab.addEventListener("click", function () {
       var idx = tab.dataset.tab;
