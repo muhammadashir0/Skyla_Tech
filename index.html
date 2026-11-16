@@ -5,92 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skyla Tech - Custom software development company</title>
   <meta name="description" content="We turn ideas into custom software development at scale. Bring your products together to make a faster go to market, augment your IT team or optimize existing processes." />
-  <meta name="theme-color" content="#070b14" />
 
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
-
-  <link rel="preload" href="assets/fonts/noto-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/poppins-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin />
-  <link rel="preload" href="assets/fonts/poppins-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body data-page="home">
+<body>
 
   <!-- ============ NAV ============ -->
-  <header class="nav" id="nav">
-    <div class="container nav__inner">
-      <a href="index.html" class="nav__logo" aria-label="Skyla Tech home">
-        <img class="nav__logo-img" src="assets/logo/skylatech-logo-dark.svg" alt="Skyla Tech" />
+  <div class="navbar" id="navbar">
+    <div class="nav-container-large">
+      <a href="index.html" class="brand-logo_link" aria-label="Skyla Tech home">
+        <img src="assets/logo/skylatech-logo.svg" alt="Skyla Tech" />
       </a>
-
-      <nav class="nav__links" id="navLinks" aria-label="Primary">
-        <a href="success-stories.html" class="nav-link">success stories</a>
-        <a href="how-we-work.html" class="nav-link">how we work</a>
-        <a href="approach.html" class="nav-link">approach</a>
-        <a href="technology-stack.html" class="nav-link">technology stack</a>
-        <a href="career.html" class="nav-link">career</a>
-        <a href="blog.html" class="nav-link">blog</a>
-        <a href="#contact" class="button-sec navmenu">discover us</a>
+      <nav class="nav-menu" aria-label="Primary navigation">
+        <a href="#" class="nav-link">success stories</a>
+        <a href="#" class="nav-link">how we work</a>
+        <a href="#" class="nav-link">approach</a>
+        <a href="#" class="nav-link">technology stack</a>
+        <a href="#" class="nav-link">career</a>
+        <a href="#" class="nav-link">blog</a>
+        <a href="#discover-us" class="button-sec navmenu">discover us</a>
       </nav>
-
-      <div class="nav__actions">
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" type="button">
-          <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>
-          </svg>
-          <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
-          </svg>
-        </button>
-        <button class="nav__burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
     </div>
-  </header>
+  </div>
 
   <main class="main-wrapper">
 
     <!-- ============ HERO ============ -->
     <header class="section-hp-hero">
-      <div class="container">
+      <div class="container-large">
         <div class="padding-vertical padding-large-hero">
           <div class="hp-hero_component">
             <div class="hp-hero_content-wrapper">
-              <h1 class="hp-hero_title">We turn ideas into <span class="green_txt-span">custom software</span> development at scale.</h1>
+              <h1>We turn ideas into custom software development at scale.</h1>
               <div class="margin-top margin-small">
-                <p class="hp-hero_paragraf">Bring your products together to make a faster go to market, augment your IT team or optimize existing processes.</p>
+                <div class="hp-hero_paragraf">Bring your products together to make a faster go to market, augment your IT team or optimize existing processes.</div>
               </div>
               <div class="margin-top margin-small">
-                <a href="#contact" class="button">let's talk</a>
+                <a href="#discover-us" class="button">let's talk</a>
               </div>
             </div>
 
             <div class="hp-hero-references_wrapper">
               <div class="hp-hero-experience">
                 <div class="value-component">
-                  <div class="value-txt">
-                    <span class="value-txt_large">+10</span> years<br>
-                  </div>
+                  <div class="value-txt"><span class="value-txt_large">+10</span> years<br></div>
                   <div class="value-txt light">in business</div>
                 </div>
               </div>
-
               <div class="hp-hero-clutch">
                 <div class="clutch-wrapper">
-                  <svg class="clutch-logo" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#1a1a2e"/><text x="24" y="31" text-anchor="middle" fill="#fff" font-size="16" font-family="Arial" font-weight="bold">Clutch</text></svg>
+                  <img src="assets/img/clutch-logo.svg" alt="clutch logo" class="clutch-logo" />
                 </div>
                 <div class="arrow_wrapper">
-                  <svg class="image-2" viewBox="0 0 120 24" aria-hidden="true">
-                    <circle cx="12" cy="12" r="5" fill="#f5b301"/><circle cx="30" cy="12" r="5" fill="#f5b301"/><circle cx="48" cy="12" r="5" fill="#f5b301"/><circle cx="66" cy="12" r="5" fill="#f5b301"/><circle cx="84" cy="12" r="5" fill="#f5b301"/>
-                  </svg>
+                  <img src="assets/img/5-stars.svg" alt="5 star clutch rating" class="image-2" />
                   <div class="value-txt light">4.8</div>
                 </div>
               </div>
-
               <div class="hp-hero-uber">
                 <div class="black_circle-wrapper">
-                  <svg class="uber-image" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="22" fill="#000"/><text x="24" y="31" text-anchor="middle" fill="#fff" font-size="14" font-family="Arial" font-weight="bold">Uber</text></svg>
+                  <img src="assets/img/uber-logo-white.svg" alt="uber logo" class="uber-image" />
                 </div>
                 <div class="hp-hero_testimonial-txt">
                   <div>"They solve the problems. They listen and provide professional work for us."</div>
@@ -102,19 +76,19 @@
           <div class="margin-top margin-huge logo-homepage">
             <div class="hp-hero-logos_component">
               <div class="logo_item">
-                <img src="assets/logo/clients/uber.svg" alt="uber logo" class="hp-hero-logo_image" />
+                <img src="assets/img/uber-logo-grey.svg" alt="uber logo" class="hp-hero-logo_image" />
               </div>
               <div class="logo_item">
-                <img src="assets/logo/clients/roche.svg" alt="roche logo" class="hp-hero-logo_image" />
+                <img src="assets/img/roche-logo-grey.svg" alt="roche logo" class="hp-hero-logo_image" />
               </div>
               <div class="logo_item">
-                <img src="assets/logo/clients/lexly.svg" alt="lexly logo" class="hp-hero-logo_image" />
+                <img src="assets/img/lexly-logo-grey.svg" alt="lexly logo" class="hp-hero-logo_image" />
               </div>
               <div class="logo_item">
-                <img src="assets/logo/clients/trace-one.svg" alt="trace one logo" class="hp-hero-logo_image" />
+                <img src="assets/img/trace-one-logo-grey.svg" alt="trace one logo" class="hp-hero-logo_image" />
               </div>
               <div class="logo_item">
-                <img src="assets/logo/clients/luesse.svg" alt="luesse logo" class="hp-hero-logo_image" />
+                <img src="assets/img/luesse-logo-grey.svg" alt="luesse logo" class="hp-hero-logo_image" />
               </div>
             </div>
           </div>
@@ -124,14 +98,12 @@
 
     <!-- ============ WORK WE LOVE ============ -->
     <section class="section-hp-success-stories">
-      <div class="container">
+      <div class="container-large">
         <div class="padding-vertical padding-xhuge">
           <div class="hp-right_heading-wrapper">
             <div class="success-experience">
               <div class="value-component right">
-                <div class="value-txt">
-                  <span class="value-txt_large">85+</span><br>
-                </div>
+                <div class="value-txt"><span class="value-txt_large">85+</span><br></div>
                 <div class="value-txt light">happy clients</div>
               </div>
             </div>
@@ -143,38 +115,36 @@
 
           <div class="margin-top margin-medium">
             <div class="_3-success-stories_component">
-              <a href="clients/uber.html" class="_3-success-stories_item uber">
-                <img src="assets/logo/clients/uber.svg" alt="uber logo" class="ss-item-logo_image" />
+              <a href="#" class="_3-success-stories_item uber">
+                <img src="assets/img/uber-logo-white.svg" alt="uber logo" class="ss-item-logo_image" />
               </a>
-              <a href="clients/roche.html" class="_3-success-stories_item roche">
-                <img src="assets/logo/clients/roche.svg" alt="roche logo" class="ss-item-logo_image" />
+              <a href="#" class="_3-success-stories_item roche">
+                <img src="assets/img/roche-logo.svg" alt="roche logo" class="ss-item-logo_image" />
               </a>
-              <a href="clients/lexly.html" class="_3-success-stories_item lexly">
-                <img src="assets/logo/clients/lexly.svg" alt="lexly logo" class="ss-item-logo_image" />
+              <a href="#" class="_3-success-stories_item lexly">
+                <img src="assets/img/lexly-logo-white.svg" alt="lexly logo" class="ss-item-logo_image" />
               </a>
             </div>
           </div>
 
           <div class="margin-top margin-huge">
             <div class="align-center">
-              <a href="success-stories.html" class="button">see all success stories</a>
+              <a href="#" class="button">see all success stories</a>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ SUPERCHARGE YOUR COMPANY ============ -->
+    <!-- ============ SUPERCHARGE ============ -->
     <section class="section-hp-supercharge">
-      <div class="container">
+      <div class="container-large">
         <div class="padding-vertical padding-xhuge">
           <div class="hp-heading-left_wrapper">
             <h2 class="max-width-large">Supercharge your company <span class="green_txt-span">growth</span> with our custom approach</h2>
             <div class="supercharge-experience">
               <div class="value-component top">
-                <div class="value-txt text-align-right">
-                  <span class="value-txt_large">1150+</span><br>
-                </div>
+                <div class="value-txt text-align-right"><span class="value-txt_large">1150+</span><br></div>
                 <div class="value-txt light">consultations this year</div>
               </div>
             </div>
@@ -184,57 +154,36 @@
             <div class="carts_component">
               <div class="cart_item">
                 <div class="cart-icon_wrapper">
-                  <svg class="cart-icon_image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.3 1 2.5h6c0-1.2.3-1.8 1-2.5A6 6 0 0 0 12 3Z" />
-                    <path d="M12 7.5v4" />
-                  </svg>
+                  <img src="assets/img/innovate.svg" alt="innovate icon" class="cart-icon_image" />
                 </div>
-                <div class="margin-top margin-small">
-                  <h3>Innovate with you</h3>
-                </div>
+                <div class="margin-top margin-small"><h3>Innovate with you</h3></div>
                 <div class="margin-top margin-small">
                   <p>Focusing on hearing you and bringing to life new concepts helping to grasp market opportunities by building proof of concepts or minimum valuable product.</p>
                 </div>
               </div>
               <div class="cart_item">
                 <div class="cart-icon_wrapper">
-                  <svg class="cart-icon_image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M3 7l9-4 9 4-9 4-9-4Z" />
-                    <path d="M3 7v6c0 1.5 4 2.5 9 2.5s9-1 9-2.5V7" />
-                    <path d="M21 13v6" />
-                  </svg>
+                  <img src="assets/img/deliver.svg" alt="deliver icon" class="cart-icon_image" />
                 </div>
-                <div class="margin-top margin-small">
-                  <h3>Deliver full scope of work</h3>
-                </div>
+                <div class="margin-top margin-small"><h3>Deliver full scope of work</h3></div>
                 <div class="margin-top margin-small">
                   <p>Full-stack, self managed teams that can build a custom, enterprise-grade solution. From high-load systems to proof-of-concepts.</p>
                 </div>
               </div>
               <div class="cart_item">
                 <div class="cart-icon_wrapper">
-                  <svg class="cart-icon_image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="12" cy="12" r="9" />
-                    <path d="M12 7v5l3 2" />
-                  </svg>
+                  <img src="assets/img/agile-dev.svg" alt="agile development icon" class="cart-icon_image" />
                 </div>
-                <div class="margin-top margin-small">
-                  <h3>Agile development</h3>
-                </div>
+                <div class="margin-top margin-small"><h3>Agile development</h3></div>
                 <div class="margin-top margin-small">
                   <p>We can help you build from scratch, upgrade, modernize platforms and applications for high performance, better user experience, scale, and security.</p>
                 </div>
               </div>
               <div class="cart_item">
                 <div class="cart-icon_wrapper">
-                  <svg class="cart-icon_image" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.7l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.7l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
-                    <path d="M3.3 7 12 12l8.7-5M12 22V12" />
-                  </svg>
+                  <img src="assets/img/modernize.svg" alt="modernize legacy technology icon" class="cart-icon_image" />
                 </div>
-                <div class="margin-top margin-small">
-                  <h3>Modernize legacy technology</h3>
-                </div>
+                <div class="margin-top margin-small"><h3>Modernize legacy technology</h3></div>
                 <div class="margin-top margin-small">
                   <p>Re-architecting legacy technology with a data migration plan for better user experience to support digital transformation.</p>
                 </div>
@@ -245,16 +194,16 @@
       </div>
     </section>
 
-    <!-- ============ CTA BANNER ============ -->
+    <!-- ============ CTA ============ -->
     <section class="section-cta">
-      <div class="container">
+      <div class="container-large">
         <div class="padding-vertical padding-huge">
           <div class="cta_component">
             <div class="cta_content">
               <h4 class="heading-medium">We will bring your company to the next level.</h4>
             </div>
             <div class="cta_button">
-              <a href="how-we-work.html" class="button">see how we work</a>
+              <a href="#" class="button">see how we work</a>
             </div>
           </div>
         </div>
@@ -263,16 +212,14 @@
 
     <!-- ============ DEVELOPING THE FUTURE ============ -->
     <section class="section-developing-the-future">
-      <div class="container">
+      <div class="container-large">
         <div class="padding-vertical padding-huge">
           <div class="developing-future_component">
             <div class="develooping-image_item">
-              <img src="assets/img/developing-future.webp" alt="developing the future image" class="developing_image" />
+              <img src="assets/img/developing-the-future.webp" alt="developing the future image" class="developing_image" />
               <div class="hp-team-members">
                 <div class="value-component">
-                  <div class="value-txt">
-                    <span class="value-txt_large">50+</span><br>
-                  </div>
+                  <div class="value-txt"><span class="value-txt_large">50+</span><br></div>
                   <div class="value-txt light">team members</div>
                 </div>
               </div>
@@ -283,7 +230,7 @@
               </div>
               <p>Top class front-end technology, to build frictionless, custom web and mobile applications which create extensive capabilities and cover all needs. Remarkable back-end development services are designed with the best industry standards and people with huge knowledge to build tailored and flexible solutions.</p>
               <div class="margin-top margin-small">
-                <a href="technology-stack.html" class="button">see our technology stack</a>
+                <a href="#" class="button">see our technology stack</a>
               </div>
             </div>
           </div>
@@ -291,9 +238,9 @@
       </div>
     </section>
 
-    <!-- ============ BENEFIT FROM OUR EXPERIENCE ============ -->
+    <!-- ============ BENEFIT ============ -->
     <section class="section-befefit">
-      <div class="container">
+      <div class="container-large">
         <div class="padding-vertical padding-huge">
           <div class="benefit_component">
             <img src="assets/img/benefit-image.png" alt="" class="benefit_image" />
@@ -306,7 +253,7 @@
                 <div class="benefit-name-txt">Muhammad Ashir - CEO at Skyla Tech</div>
               </div>
               <div class="margin-top margin-medium">
-                <a href="approach.html" class="button">see our approach</a>
+                <a href="#" class="button">see our approach</a>
               </div>
             </div>
           </div>
@@ -316,16 +263,14 @@
 
     <!-- ============ CLIENTS TESTIMONIALS ============ -->
     <section class="section-client-testimonials">
-      <div class="container">
+      <div class="container-large">
         <div class="padding-vertical padding-xhuge">
           <div class="margin-bottom margin-huge">
             <div class="hp-heading-left_wrapper">
               <h2 class="max-width-large">Clients <span class="green_txt-span">testimonials</span><br></h2>
               <div class="client-testimonials">
                 <div class="value-component up-right">
-                  <div class="value-txt text-align-right">
-                    <span class="value-txt_large">1150+</span><br>
-                  </div>
+                  <div class="value-txt text-align-right"><span class="value-txt_large">1150+</span><br></div>
                   <div class="value-txt light">consultations this year</div>
                 </div>
               </div>
@@ -333,15 +278,15 @@
           </div>
 
           <div class="client-testimonials_component">
-            <div class="testimonials_tabs" role="tablist">
+            <div class="testimonials_tabs">
               <div class="testimonials_tabs-menu" role="tablist">
                 <button class="testimonials_tab-link is-active" role="tab" aria-selected="true" data-tab="0">
                   <div class="testimonials_tab-link_wrapper">
                     <div class="tab_image-wrapper">
                       <div class="white_circle-wrapper">
-                        <img src="assets/logo/clients/trace-one.svg" alt="" class="testimonial-on-white-image" />
+                        <img src="assets/img/trace-one-sign-logo.svg" alt="" class="testimonial-on-white-image" />
                       </div>
-                      <svg class="tab_image-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                      <img src="assets/img/arrow-right.svg" alt="" class="tab_image-arrow" />
                     </div>
                     <div class="testimonial_tab-content">
                       <div class="test-brand-name_txt">Trace One</div>
@@ -352,9 +297,9 @@
                   <div class="testimonials_tab-link_wrapper">
                     <div class="tab_image-wrapper">
                       <div class="white_circle-wrapper roche">
-                        <img src="assets/logo/clients/roche.svg" alt="" class="testimonial-on-white-image" />
+                        <img src="assets/img/roche-logo.svg" alt="" class="testimonial-on-white-image" />
                       </div>
-                      <svg class="tab_image-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                      <img src="assets/img/arrow-right.svg" alt="" class="tab_image-arrow" />
                     </div>
                     <div class="testimonial_tab-content">
                       <div class="test-brand-name_txt">Roche</div>
@@ -365,9 +310,9 @@
                   <div class="testimonials_tab-link_wrapper">
                     <div class="tab_image-wrapper">
                       <div class="black_circle-wrapper">
-                        <img src="assets/logo/clients/uber.svg" alt="" class="uber-image" />
+                        <img src="assets/img/uber-logo-white.svg" alt="" class="uber-image" />
                       </div>
-                      <svg class="tab_image-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+                      <img src="assets/img/arrow-right.svg" alt="" class="tab_image-arrow" />
                     </div>
                     <div class="testimonial_tab-content">
                       <div class="test-brand-name_txt">Uber</div>
@@ -380,45 +325,39 @@
                 <div class="tab-pane is-active" data-panel="0">
                   <div class="tab-pane_content">
                     <div class="margin-bottom margin-small">
-                      <svg class="t-stars" viewBox="0 0 120 24" fill="currentColor" aria-hidden="true">
-                        <circle cx="12" cy="12" r="5"/><circle cx="30" cy="12" r="5"/><circle cx="48" cy="12" r="5"/><circle cx="66" cy="12" r="5"/><circle cx="84" cy="12" r="5"/>
-                      </svg>
+                      <img src="assets/img/5-stars.svg" alt="5 stars" />
                     </div>
                     <div class="margin-bottom margin-small">
                       <div class="testimonial_txt">Based on development velocity and quality, Skyla Tech is a top-level vendor, on-par with the client's internal resources. Communication is smooth and efficient, mirroring the ease of working with in-house developers. Skyla Tech's work spurs few customer issues, which is evidence of their commitment.</div>
                     </div>
                     <div class="margin-top margin-medium">
-                      <a href="clients/e-sourcing.html" class="button">client review</a>
+                      <a href="#" class="button">client review</a>
                     </div>
                   </div>
                 </div>
                 <div class="tab-pane" data-panel="1">
                   <div class="tab-pane_content">
                     <div class="margin-bottom margin-small">
-                      <svg class="t-stars" viewBox="0 0 120 24" fill="currentColor" aria-hidden="true">
-                        <circle cx="12" cy="12" r="5"/><circle cx="30" cy="12" r="5"/><circle cx="48" cy="12" r="5"/><circle cx="66" cy="12" r="5"/><circle cx="84" cy="12" r="5"/>
-                      </svg>
+                      <img src="assets/img/5-stars.svg" alt="5 stars" />
                     </div>
                     <div class="margin-bottom margin-small">
-                      <div class="testimonial_txt">The app was successfully launched, garnering at least 25% of its target users, and is still live. The schedule of the project was communicated well, and the team was very supportive, providing mockups that could be tested with users, and bringing both design and development expertize to the table.</div>
+                      <div class="testimonial_txt">The app was successfully launched, garnering at least 25% of its target users, and is still live. The schedule of the project was communicated well, and the team was very supportive, providing mockups that could be tested with users, and bringing both design and development expertise to the table.</div>
                     </div>
                     <div class="margin-top margin-medium">
-                      <a href="clients/roche.html" class="button">client review</a>
+                      <a href="#" class="button">client review</a>
                     </div>
                   </div>
                 </div>
                 <div class="tab-pane" data-panel="2">
                   <div class="tab-pane_content">
                     <div class="margin-bottom margin-small">
-                      <svg class="t-stars" viewBox="0 0 120 24" fill="currentColor" aria-hidden="true">
-                        <circle cx="12" cy="12" r="5"/><circle cx="30" cy="12" r="5"/><circle cx="48" cy="12" r="5"/><circle cx="66" cy="12" r="5"/><circle cx="84" cy="12" r="5"/>
-                      </svg>
+                      <img src="assets/img/5-stars.svg" alt="5 stars" />
                     </div>
                     <div class="margin-bottom margin-small">
                       <div class="testimonial_txt">Skyla Tech has a team of skilled problem solvers. They've delivered high-quality work so far. The team is committed to the project and works quickly. They follow a scrum methodology and they meet with their partners weekly. They're strong collaborators and provide weekly demonstrations.</div>
                     </div>
                     <div class="margin-top margin-medium">
-                      <a href="clients/uber.html" class="button">client review</a>
+                      <a href="#" class="button">client review</a>
                     </div>
                   </div>
                 </div>
@@ -432,8 +371,8 @@
     </section>
 
     <!-- ============ CONTACT FORM ============ -->
-    <section class="section-form" id="contact">
-      <div class="container">
+    <section class="section-form" id="discover-us">
+      <div class="container-large">
         <div class="padding-vertical padding-xhuge">
           <div class="margin-bottom margin-large">
             <div class="hp-right_heading-wrapper">
@@ -442,9 +381,7 @@
               </div>
               <div class="finalized-product">
                 <div class="value-component up-right">
-                  <div class="value-txt">
-                    <span class="value-txt_large">+100</span><br>
-                  </div>
+                  <div class="value-txt"><span class="value-txt_large">+100</span><br></div>
                   <div class="value-txt light">finalized products</div>
                 </div>
               </div>
@@ -489,10 +426,26 @@
                 <div class="form-field_wrapper">
                   <label class="form_field-label">Preferable front-end technology</label>
                   <div class="form-checkbox_wrapper">
-                    <label class="form-checkbox"><input type="checkbox" name="angular" id="angular" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Angular</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="react" id="react" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">React</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="vue" id="vue" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Vue</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="other-fe" id="other-fe" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Other</span></label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="angular" id="angular" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">Angular</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="react" id="react" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">React</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="vue" id="vue" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">Vue</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="other-fe" id="other-fe" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">Other</span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -500,11 +453,31 @@
                 <div class="form-field_wrapper">
                   <label class="form_field-label">Preferable back-end technology</label>
                   <div class="form-checkbox_wrapper">
-                    <label class="form-checkbox"><input type="checkbox" name="nodejs" id="nodejs" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Node.JS</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="php" id="php" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">PHP</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="java" id="java" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Java</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="net" id="net" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">.Net(C#)</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="other-be" id="other-be" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Other</span></label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="nodejs" id="nodejs" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">Node.JS</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="php" id="php" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">PHP</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="java" id="java" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">Java</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="net" id="net" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">.Net(C#)</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="other-be" id="other-be" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">Other</span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -512,10 +485,26 @@
                 <div class="form-field_wrapper">
                   <label class="form_field-label">What would you like to do?</label>
                   <div class="form-checkbox_wrapper">
-                    <label class="form-checkbox"><input type="checkbox" name="team-aug" id="team-aug" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Team augumentation</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="new-idea" id="new-idea" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">New idea</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="ongoing" id="ongoing" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Ongoing project</span></label>
-                    <label class="form-checkbox"><input type="checkbox" name="other-todo" id="other-todo" style="opacity:0;position:absolute;z-index:-1" /><span class="form-checkbox-icon" aria-hidden="true"></span><span class="form-checkbox-label">Other</span></label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="team-aug" id="team-aug" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">Team augmentation</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="new-idea" id="new-idea" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">New idea</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="ongoing" id="ongoing" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">Ongoing project</span>
+                    </label>
+                    <label class="form-checkbox">
+                      <input type="checkbox" name="other-todo" id="other-todo" style="opacity:0;position:absolute;z-index:-1" />
+                      <span class="form-checkbox-icon" aria-hidden="true"></span>
+                      <span class="form-checkbox-label">Other</span>
+                    </label>
                   </div>
                 </div>
               </div>
@@ -527,17 +516,17 @@
                 <div class="form-button_wrapper">
                   <div class="form-button-disclaimer_wrapper">
                     <div class="margin-right margin-xsmall">
-                      <svg class="form-discl_image" viewBox="0 0 24 24" fill="none" stroke="#00a964" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 3.5v6c0 5-3.4 8.7-8 10.5-4.6-1.8-8-5.5-8-10.5v-6L12 2Z" /><path d="M9 12l2 2 4-4" /></svg>
+                      <img src="assets/img/shield-done.svg" alt="" class="form-discl_image" />
                     </div>
                     <div class="form-adnotation_text">We guarantee 100% confidentiality</div>
                   </div>
                   <button type="submit" class="button-sec" data-wait="Please wait...">send your message</button>
                 </div>
               </div>
-
-              <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
             </div>
           </form>
+
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
         </div>
       </div>
     </section>
@@ -545,7 +534,7 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container">
+    <div class="container-large">
       <div class="padding-vertical padding-large">
         <div class="margin-bottom margin-small">
           <img src="assets/logo/skylatech-logo.svg" alt="" />
@@ -568,11 +557,11 @@
               <div class="text-size-small">
                 <div class="margin-top margin-xsmall">
                   <div class="footer-link_wrapper">
-                    <a href="success-stories.html" class="footer_link-block">Success Stories<br></a>
-                    <a href="how-we-work.html" class="footer_link-block">How we work<br></a>
-                    <a href="approach.html" class="footer_link-block">Approach<br></a>
-                    <a href="technology-stack.html" class="footer_link-block">Technology stack<br></a>
-                    <a href="blog.html" class="footer_link-block">Blog<br></a>
+                    <a href="#" class="footer_link-block">Success Stories<br></a>
+                    <a href="#" class="footer_link-block">How we work<br></a>
+                    <a href="#" class="footer_link-block">Approach<br></a>
+                    <a href="#" class="footer_link-block">Technology stack<br></a>
+                    <a href="#" class="footer_link-block">Blog<br></a>
                   </div>
                 </div>
               </div>
@@ -582,35 +571,45 @@
               <div class="text-size-small">
                 <div class="margin-top margin-xsmall">
                   <div class="footer-link_wrapper">
-                    <a href="career.html" class="footer_link-block">Careers<br></a>
+                    <a href="#" class="footer_link-block">About us<br></a>
+                    <a href="#" class="footer_link-block">Careers<br></a>
                   </div>
                 </div>
               </div>
             </div>
             <div class="footer-social_wrapper">
-              <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social_link-block">
-                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9Z"/></svg>
+              <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="footer-social_link-block">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z"/></svg>
               </a>
-              <a href="https://x.com" target="_blank" rel="noopener" class="footer-social_link-block">
+              <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="footer-social_link-block">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"/></svg>
+              </a>
+              <a href="https://twitter.com/" target="_blank" rel="noopener" class="footer-social_link-block">
                 <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231 5.45-6.231Zm-1.161 17.52h1.833L7.084 4.126H5.117l11.966 15.644Z"/></svg>
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social_link-block">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none" /></svg>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="footer-social_link-block">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9V9Z"/></svg>
+              </a>
+              <a href="https://www.youtube.com/" target="_blank" rel="noopener" class="footer-social_link-block">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.5a3 3 0 0 0-2.1-2.12C19.06 5 12 5 12 5s-7.06 0-8.9.38A3 3 0 0 0 1 7.5C.2 9.42.2 12 .2 12s0 2.58.8 4.5a3 3 0 0 0 2.1 2.12C4.94 19 12 19 12 19s7.06 0 8.9-.38a3 3 0 0 0 2.1-2.12c.8-1.42.8-4.5.8-4.5s0-2.58-.8-4.5ZM9.75 15.5v-7l6 3.5-6 3.5Z"/></svg>
+              </a>
+              <a href="https://dribbble.com/" target="_blank" rel="noopener" class="footer-social_link-block">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.5 4.07a8.1 8.1 0 0 1 1.8 5.1c-.26-.06-3.1-.64-5.93-.26-.06-.16-.12-.32-.18-.48 3.36-1.32 4.8-3.19 4.31-4.36ZM12 3.5c2.05 0 3.91.75 5.43 1.97a5.3 5.3 0 0 0-5.43-1.97 5.3 5.3 0 0 0 0 2.94c.1-.16.19-.32.28-.48a8.1 8.1 0 0 0-.28-.99ZM8.04 4.06c.32.08.62.18.91.28a8.1 8.1 0 0 0-.28.99A5.3 5.3 0 0 0 7 9.1a5.3 5.3 0 0 0 .04-1.04c-.62-.25-1.25-.36-1.9-.34 1.08 2.76 3.34 4.6 6.66 5.55a5.3 5.3 0 0 0-.04-1.04c-.32.06-.64.1-.96.1-3.76-.82-5.24-4.31-5.24-4.31ZM3.5 12v-.14c.35 0 .69.06 1 .17.5.18 2.4.69 4.74.26.26.54.49 1.09.69 1.65a5.3 5.3 0 0 1-5.24-1.94Zm2.1 1.94c.13-.38.27-.76.41-1.13 1.43.46 2.9.46 4.37.23-.13.55-.33 1.08-.58 1.62a5.3 5.3 0 0 1-4.2-.72Zm4.84 4.84c-1.8 0-3.4-.6-4.74-1.57.16-.32.32-.65.48-.98a8.1 8.1 0 0 0 4.26.33c.18.01.36 0 .54-.04a5.3 5.3 0 0 0 .04.96Zm2.36-1.04c-.13.04-.27.07-.41.1a8.1 8.1 0 0 0 2.37-3.74 5.3 5.3 0 0 0-.5-2.42 5.3 5.3 0 0 0-2.46.92c.23.4.43.81.59 1.24.37.94.58 1.92.58 2.9Z"/></svg>
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="container">
+      <div class="container-large">
         <div class="padding-vertical padding-small">
           <div class="text-color-white">
             <div class="text-size-small">
               <div class="footer_bottom">
                 <div class="footer-copyright_txt">Copyright © 2012-2024 Skyla Tech - The greatest software for a great business.</div>
-                <a href="nda.html" class="footer-bottom_link">NDA</a>
-                <a href="privacy-policy.html" class="footer-bottom_link">Privacy Policy</a>
-                <a href="candidates-clause.html" class="footer-bottom_link">Information Clause for Candidates<br></a>
+                <a href="#" class="footer-bottom_link">NDA</a>
+                <a href="#" class="footer-bottom_link">Privacy Policy</a>
+                <a href="#" class="footer-bottom_link">Information Clause for Candidates</a>
               </div>
             </div>
           </div>
