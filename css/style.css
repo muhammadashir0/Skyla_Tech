@@ -471,8 +471,8 @@ input, textarea, select { font-family: inherit; }
 /* Hero text area: white background, text on left, Clutch + stat badges floating */
 .hero__content-area {
   position: relative;
-  padding: 176px 0 120px;
-  min-height: 1100px;
+  padding: 176px 0 80px;
+  min-height: 900px;
 }
 .hero__text { max-width: 700px; }
 .hero__kicker {
@@ -530,7 +530,7 @@ input, textarea, select { font-family: inherit; }
 /* Decorative split section: black left / light-blue right with contour lines */
 .hero__split-decor {
   display: grid; grid-template-columns: 33fr 67fr; gap: 32px;
-  min-height: 340px;
+  min-height: 442px;
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 0 55px;
@@ -553,11 +553,11 @@ input, textarea, select { font-family: inherit; }
   position: relative; overflow: hidden;
 }
 .hero__dark-grid {
-  display: grid; grid-template-columns: 33fr 67fr; gap: 0; align-items: stretch;
-  padding: 50px 0 60px;
+  display: grid; grid-template-columns: 33fr 32px 67fr; gap: 0; align-items: stretch;
+  padding: 40px 0 50px;
 }
 .hero__dark-content {
-  padding: 0 28px 0 55px;
+  padding: 0 20px 0 0;
   display: flex; flex-direction: column; justify-content: flex-start;
 }
 .hero__dark-kicker {
@@ -573,17 +573,15 @@ input, textarea, select { font-family: inherit; }
 
 /* White vertical divider bar between text and dashboard */
 .hero__dark-divider {
-  width: 32px;
   background: #ffffff;
-  justify-self: start;
   align-self: stretch;
 }
 
 .hero__dark-visual {
   display: flex; justify-content: center; align-items: center;
-  padding: 0 55px 0 28px;
+  padding: 0 0 0 20px;
 }
-.hero__dark-visual img { width: 100%; max-width: 600px; height: auto; display: block; }
+.hero__dark-visual img { width: 100%; max-width: 100%; height: auto; display: block; }
 
 /* ---------- Work We Love (asymmetric 3-image layout) ---------- */
 .work-asymmetric {
@@ -764,7 +762,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ---------- Sections ---------- */
-.section { padding: 90px 0; position: relative; transition: var(--transition-theme); }
+.section { padding: 60px 0; position: relative; transition: var(--transition-theme); }
 .section--alt { background: var(--alice-blue-2); }
 
 /* Ready4S section tints: services has light blue #f2f9ff background */
@@ -789,7 +787,7 @@ input, textarea, select { font-family: inherit; }
   background: linear-gradient(to bottom, transparent, var(--alice-blue) 30%, var(--alice-blue) 70%, transparent);
   margin: 0;
 }
-.section--tight { padding-top: 60px; }
+.section--tight { padding-top: 40px; }
 .section__head { text-align: center; max-width: 760px; margin: 0 auto 54px; }
 .section__title {
   font-family: var(--font-display); font-weight: 700; letter-spacing: -.02em;
@@ -995,7 +993,7 @@ input, textarea, select { font-family: inherit; }
 .t-link { margin-top: 20px; }
 
 /* ---------- Contact ---------- */
-.section--contact { padding-bottom: 110px; background: var(--card-light); }
+.section--contact { padding-bottom: 80px; background: var(--card-light); }
 .contact {
   display: grid; grid-template-columns: 0.85fr 1.15fr; gap: 56px; align-items: start;
 }
@@ -1215,7 +1213,7 @@ input, textarea, select { font-family: inherit; }
 }
 
 /* ---------- Features (approach page: alternating midnight-blue sections) ---------- */
-.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; margin-bottom: 84px; }
+.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; margin-bottom: 56px; }
 .feature:last-child { margin-bottom: 0; }
 .feature--reverse .split__media { order: 2; }
 .feature--dark {
@@ -1250,7 +1248,7 @@ input, textarea, select { font-family: inherit; }
 .challenge__author small { color: rgba(255, 255, 255, 0.7); }
 
 /* ---------- Success stories: case cards ---------- */
-.cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 84px; }
+.cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 56px; }
 .case {
   display: flex; flex-direction: column; border-radius: var(--radius); overflow: hidden;
   background: var(--card-light); border: 1px solid var(--card-border);
@@ -1349,7 +1347,7 @@ body[data-page="approach"] .nav__links a[href="approach.html"]::after { width: 1
   .nav__links a { padding: 14px 0; border-bottom: 1px solid var(--border); }
   .nav__burger { display: flex; }
   .hero { padding: 110px 0 70px; }
-  .section { padding: 64px 0; }
+  .section { padding: 48px 0; }
   .quote-card { padding: 32px 24px; }
   .contact { padding: 28px 20px; gap: 32px; }
   .contact__form-card { padding: 24px 20px; }
