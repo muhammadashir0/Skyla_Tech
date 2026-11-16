@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 48" fill="none">
+  <rect x="2" y="4" width="40" height="40" rx="10" fill="#00aa64"/>
+  <path d="M14 18 L24 28 L14 38" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  <text x="52" y="30" font-family="Montserrat, Arial, sans-serif" font-size="22" font-weight="700" fill="#03283d">Skyla<tspan fill="#00aa64">Tech</tspan></text>
+</svg>
