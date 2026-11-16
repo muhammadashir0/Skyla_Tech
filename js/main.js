@@ -1,11 +1,30 @@
 // =========================================================
-// Skyla Tech — Homepage interactions
+// Skyla Tech — Site interactions
 // =========================================================
 
 (function () {
   "use strict";
 
-  /* ---------- Navbar scroll ---------- */
+  /* ---------- Mobile menu toggle ---------- */
+  var toggle = document.getElementById("navMenuToggle");
+  var menu = document.getElementById("navMenu");
+  if (toggle && menu) {
+    toggle.addEventListener("click", function () {
+      var open = menu.classList.toggle("open");
+      toggle.classList.toggle("open", open);
+      toggle.setAttribute("aria-expanded", String(open));
+    });
+    /* Close menu when a link is clicked */
+    menu.querySelectorAll("a").forEach(function (link) {
+      link.addEventListener("click", function () {
+        menu.classList.remove("open");
+        toggle.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  }
+
+  /* ---------- Navbar shadow on scroll ---------- */
   var navbar = document.getElementById("navbar");
   window.addEventListener("scroll", function () {
     if (!navbar) return;
