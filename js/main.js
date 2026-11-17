@@ -51,6 +51,34 @@
     });
   });
 
+  /* ---------- Scroll reveal ---------- */
+  var revealEls = document.querySelectorAll(
+    "section > .container-large > *, header > .container-large > *"
+  );
+  revealEls.forEach(function (el, i) {
+    el.classList.add("reveal");
+    /* gentle stagger for grouped siblings */
+    el.style.transitionDelay = Math.min((i % 4) * 70, 280) + "ms";
+  });
+
+  if ("IntersectionObserver" in window) {
+    var revealObserver = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" }
+    );
+    revealEls.forEach(function (el) { revealObserver.observe(el); });
+  } else {
+    /* fallback: show everything */
+    revealEls.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
   /* ---------- Contact form ---------- */
   var form = document.getElementById("contactForm");
   var status = document.getElementById("formStatus");
