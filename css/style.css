@@ -367,6 +367,7 @@ input, textarea, select { font-family: inherit; }
 .benefit_image {
     width: 100%; border-radius: var(--radius-lg); display: block;
     box-shadow: var(--card-shadow-strong);
+    object-fit: cover;
 }
 .benefit_content h2 {
     font-family: var(--font-display); font-weight: 700; letter-spacing: -0.02em;
@@ -628,6 +629,7 @@ input, textarea, select { font-family: inherit; }
 .feature_image {
     width: 100%; display: block; border-radius: var(--radius-lg);
     position: relative; z-index: 1;
+    object-fit: cover;
 }
 .radial-circle_bg {
     position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
